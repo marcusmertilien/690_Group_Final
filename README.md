@@ -1,5 +1,10 @@
 # 690_Group_Final
 
+Marcus Mertilien
+Teodora Caneva
+Betty Reaney
+Shayan Mojtabavi
+
 Proposal: (possible ideas)
 -game
 -socail app
