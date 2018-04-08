@@ -2,7 +2,6 @@
 
 Marcus Mertilien
 Teodora Caneva
-Betty Reaney
 Shayan Mojtabavi
 
 **Milestone 1: 04/03/16** ✅
