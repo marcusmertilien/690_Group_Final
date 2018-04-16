@@ -21,6 +21,16 @@ Shayan Mojtabavi
 -push notifications
 -play with friends
 
+**New Idea**
++ Proposal: "Study Sesh"
++ Featrues:
+  + - Log in screen (2hrs)
+  + - Calendar View
+  + - Event View
+  + - Chat Room
+  + - Study Session Notifications
+  
+
 **Milestone 2: 04/17/18**
 + Wire Frame for must have features
 + Working UI for key parts
