@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F86D28F020858F5700737388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D28EF20858F5700737388 /* AppDelegate.swift */; };
+		F86D28F220858F5700737388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D28F120858F5700737388 /* ViewController.swift */; };
+		F86D28F520858F5700737388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86D28F320858F5700737388 /* Main.storyboard */; };
+		F86D28F720858F5700737388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86D28F620858F5700737388 /* Assets.xcassets */; };
+		F86D28FA20858F5700737388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86D28F820858F5700737388 /* LaunchScreen.storyboard */; };
+		F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290420858F5700737388 /* Study_SeshTests.swift */; };
+		F86D291020858F5700737388 /* Study_SeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290F20858F5700737388 /* Study_SeshUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F86D290120858F5700737388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F86D28E420858F5700737388 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F86D28EB20858F5700737388;
+			remoteInfo = "Study Sesh";
+		};
+		F86D290C20858F5700737388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F86D28E420858F5700737388 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F86D28EB20858F5700737388;
+			remoteInfo = "Study Sesh";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F86D28EC20858F5700737388 /* Study Sesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Sesh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86D28EF20858F5700737388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F86D28F120858F5700737388 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F86D28F420858F5700737388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F86D28F620858F5700737388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F86D28F920858F5700737388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F86D28FB20858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F86D290020858F5700737388 /* Study SeshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study SeshTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86D290420858F5700737388 /* Study_SeshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshTests.swift; sourceTree = "<group>"; };
+		F86D290620858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F86D290B20858F5700737388 /* Study SeshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study SeshUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86D290F20858F5700737388 /* Study_SeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshUITests.swift; sourceTree = "<group>"; };
+		F86D291120858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F86D28E920858F5700737388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86D28FD20858F5700737388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86D290820858F5700737388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F86D28E320858F5700737388 = {
+			isa = PBXGroup;
+			children = (
+				F86D28EE20858F5700737388 /* Study Sesh */,
+				F86D290320858F5700737388 /* Study SeshTests */,
+				F86D290E20858F5700737388 /* Study SeshUITests */,
+				F86D28ED20858F5700737388 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F86D28ED20858F5700737388 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F86D28EC20858F5700737388 /* Study Sesh.app */,
+				F86D290020858F5700737388 /* Study SeshTests.xctest */,
+				F86D290B20858F5700737388 /* Study SeshUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F86D28EE20858F5700737388 /* Study Sesh */ = {
+			isa = PBXGroup;
+			children = (
+				F86D28EF20858F5700737388 /* AppDelegate.swift */,
+				F86D28F120858F5700737388 /* ViewController.swift */,
+				F86D28F320858F5700737388 /* Main.storyboard */,
+				F86D28F620858F5700737388 /* Assets.xcassets */,
+				F86D28F820858F5700737388 /* LaunchScreen.storyboard */,
+				F86D28FB20858F5700737388 /* Info.plist */,
+			);
+			path = "Study Sesh";
+			sourceTree = "<group>";
+		};
+		F86D290320858F5700737388 /* Study SeshTests */ = {
+			isa = PBXGroup;
+			children = (
+				F86D290420858F5700737388 /* Study_SeshTests.swift */,
+				F86D290620858F5700737388 /* Info.plist */,
+			);
+			path = "Study SeshTests";
+			sourceTree = "<group>";
+		};
+		F86D290E20858F5700737388 /* Study SeshUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F86D290F20858F5700737388 /* Study_SeshUITests.swift */,
+				F86D291120858F5700737388 /* Info.plist */,
+			);
+			path = "Study SeshUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F86D28EB20858F5700737388 /* Study Sesh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F86D291420858F5700737388 /* Build configuration list for PBXNativeTarget "Study Sesh" */;
+			buildPhases = (
+				F86D28E820858F5700737388 /* Sources */,
+				F86D28E920858F5700737388 /* Frameworks */,
+				F86D28EA20858F5700737388 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Study Sesh";
+			productName = "Study Sesh";
+			productReference = F86D28EC20858F5700737388 /* Study Sesh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F86D28FF20858F5700737388 /* Study SeshTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F86D291720858F5700737388 /* Build configuration list for PBXNativeTarget "Study SeshTests" */;
+			buildPhases = (
+				F86D28FC20858F5700737388 /* Sources */,
+				F86D28FD20858F5700737388 /* Frameworks */,
+				F86D28FE20858F5700737388 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F86D290220858F5700737388 /* PBXTargetDependency */,
+			);
+			name = "Study SeshTests";
+			productName = "Study SeshTests";
+			productReference = F86D290020858F5700737388 /* Study SeshTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F86D290A20858F5700737388 /* Study SeshUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F86D291A20858F5700737388 /* Build configuration list for PBXNativeTarget "Study SeshUITests" */;
+			buildPhases = (
+				F86D290720858F5700737388 /* Sources */,
+				F86D290820858F5700737388 /* Frameworks */,
+				F86D290920858F5700737388 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F86D290D20858F5700737388 /* PBXTargetDependency */,
+			);
+			name = "Study SeshUITests";
+			productName = "Study SeshUITests";
+			productReference = F86D290B20858F5700737388 /* Study SeshUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F86D28E420858F5700737388 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Mertilien Studios";
+				TargetAttributes = {
+					F86D28EB20858F5700737388 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F86D28FF20858F5700737388 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F86D28EB20858F5700737388;
+					};
+					F86D290A20858F5700737388 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F86D28EB20858F5700737388;
+					};
+				};
+			};
+			buildConfigurationList = F86D28E720858F5700737388 /* Build configuration list for PBXProject "Study Sesh" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F86D28E320858F5700737388;
+			productRefGroup = F86D28ED20858F5700737388 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F86D28EB20858F5700737388 /* Study Sesh */,
+				F86D28FF20858F5700737388 /* Study SeshTests */,
+				F86D290A20858F5700737388 /* Study SeshUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F86D28EA20858F5700737388 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86D28FA20858F5700737388 /* LaunchScreen.storyboard in Resources */,
+				F86D28F720858F5700737388 /* Assets.xcassets in Resources */,
+				F86D28F520858F5700737388 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86D28FE20858F5700737388 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86D290920858F5700737388 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F86D28E820858F5700737388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86D28F220858F5700737388 /* ViewController.swift in Sources */,
+				F86D28F020858F5700737388 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86D28FC20858F5700737388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86D290720858F5700737388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86D291020858F5700737388 /* Study_SeshUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F86D290220858F5700737388 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F86D28EB20858F5700737388 /* Study Sesh */;
+			targetProxy = F86D290120858F5700737388 /* PBXContainerItemProxy */;
+		};
+		F86D290D20858F5700737388 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F86D28EB20858F5700737388 /* Study Sesh */;
+			targetProxy = F86D290C20858F5700737388 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F86D28F320858F5700737388 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F86D28F420858F5700737388 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F86D28F820858F5700737388 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F86D28F920858F5700737388 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F86D291220858F5700737388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F86D291320858F5700737388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F86D291520858F5700737388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Study Sesh/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-Sesh";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F86D291620858F5700737388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Study Sesh/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-Sesh";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F86D291820858F5700737388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Study SeshTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-SeshTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study Sesh.app/Study Sesh";
+			};
+			name = Debug;
+		};
+		F86D291920858F5700737388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Study SeshTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-SeshTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study Sesh.app/Study Sesh";
+			};
+			name = Release;
+		};
+		F86D291B20858F5700737388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Study SeshUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-SeshUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Study Sesh";
+			};
+			name = Debug;
+		};
+		F86D291C20858F5700737388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Study SeshUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-SeshUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Study Sesh";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F86D28E720858F5700737388 /* Build configuration list for PBXProject "Study Sesh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86D291220858F5700737388 /* Debug */,
+				F86D291320858F5700737388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F86D291420858F5700737388 /* Build configuration list for PBXNativeTarget "Study Sesh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86D291520858F5700737388 /* Debug */,
+				F86D291620858F5700737388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F86D291720858F5700737388 /* Build configuration list for PBXNativeTarget "Study SeshTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86D291820858F5700737388 /* Debug */,
+				F86D291920858F5700737388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F86D291A20858F5700737388 /* Build configuration list for PBXNativeTarget "Study SeshUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86D291B20858F5700737388 /* Debug */,
+				F86D291C20858F5700737388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F86D28E420858F5700737388 /* Project object */;
+}
