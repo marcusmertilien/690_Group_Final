@@ -28,13 +28,15 @@ Shayan Mojtabavi
 
 **New Idea**
 + Proposal: "Study Sesh"
-+ Featrues:
-  + - Log in screen (2hrs)
-  + - Calendar View
-  + - Event View
-  + - Chat Room
-  + - Study Session Notifications
-  
++ Manditory Featrues:
+   - Calendar View
+   - Event View
+   - Add Event View
+   - Chat Room
+   
++ Optional Features
+  - Study Session Notifications
+  - Log in screen (2hrs)
 
 **Milestone 2: 04/17/18**
 + Wire Frame for must have features
