@@ -78,12 +78,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F86522282086BB480006FEED /* Image Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F86522212086A7050006FEED /* Default.png */,
+				F86522202086A7050006FEED /* Default@2x.png */,
+			);
+			path = "Image Assets";
+			sourceTree = "<group>";
+		};
 		F86D28E320858F5700737388 = {
 			isa = PBXGroup;
 			children = (
 				F86522262086AC430006FEED /* Launch Screen.storyboard */,
-				F86522212086A7050006FEED /* Default.png */,
-				F86522202086A7050006FEED /* Default@2x.png */,
+				F86522282086BB480006FEED /* Image Assets */,
 				F86D28EE20858F5700737388 /* Study Sesh */,
 				F86D290320858F5700737388 /* Study SeshTests */,
 				F86D290E20858F5700737388 /* Study SeshUITests */,
