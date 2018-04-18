@@ -11,7 +11,7 @@
 		F86522232086A7050006FEED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522212086A7050006FEED /* Default.png */; };
 		F86522272086AC430006FEED /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86522262086AC430006FEED /* Launch Screen.storyboard */; };
 		F86D28F020858F5700737388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D28EF20858F5700737388 /* AppDelegate.swift */; };
-		F86D28F220858F5700737388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D28F120858F5700737388 /* ViewController.swift */; };
+		F86D28F220858F5700737388 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D28F120858F5700737388 /* AppointmentViewController.swift */; };
 		F86D28F520858F5700737388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86D28F320858F5700737388 /* Main.storyboard */; };
 		F86D28F720858F5700737388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86D28F620858F5700737388 /* Assets.xcassets */; };
 		F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290420858F5700737388 /* Study_SeshTests.swift */; };
@@ -41,7 +41,7 @@
 		F86522262086AC430006FEED /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F86D28EC20858F5700737388 /* Study Sesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Sesh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86D28EF20858F5700737388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F86D28F120858F5700737388 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F86D28F120858F5700737388 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		F86D28F420858F5700737388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F86D28F620858F5700737388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F86D28FB20858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F86D28EF20858F5700737388 /* AppDelegate.swift */,
-				F86D28F120858F5700737388 /* ViewController.swift */,
+				F86D28F120858F5700737388 /* AppointmentViewController.swift */,
 				F86D28F320858F5700737388 /* Main.storyboard */,
 				F86D28F620858F5700737388 /* Assets.xcassets */,
 				F86D28FB20858F5700737388 /* Info.plist */,
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86D28F220858F5700737388 /* ViewController.swift in Sources */,
+				F86D28F220858F5700737388 /* AppointmentViewController.swift in Sources */,
 				F86D28F020858F5700737388 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
