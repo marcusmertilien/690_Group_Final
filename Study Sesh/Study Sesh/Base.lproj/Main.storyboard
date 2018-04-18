@@ -82,7 +82,7 @@
         <!--Callendar View Controller-->
         <scene sceneID="GYU-jG-5RZ">
             <objects>
-                <viewController id="Fto-KT-o2q" userLabel="Callendar View Controller" sceneMemberID="viewController">
+                <viewController id="Fto-KT-o2q" userLabel="Callendar View Controller" customClass="CalendarViewController" customModule="Study_Sesh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lf0-yI-jug">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="2188" y="915.29235382308855"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="OJz-NU-EYu">
             <objects>
-                <viewController id="qph-cx-5Nd" sceneMemberID="viewController">
+                <viewController id="qph-cx-5Nd" customClass="ChatViewController" customModule="Study_Sesh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ihh-Xq-bH8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="158" y="312"/>
         </scene>
-        <!--Add View Controller-->
+        <!--AddSesh View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Add View Controller" customClass="ViewController" customModule="Study_Sesh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="AddSesh View Controller" customClass="AddSeshViewController" customModule="Study_Sesh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

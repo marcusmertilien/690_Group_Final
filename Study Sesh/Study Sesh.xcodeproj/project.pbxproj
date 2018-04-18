@@ -16,6 +16,9 @@
 		F86D28F720858F5700737388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86D28F620858F5700737388 /* Assets.xcassets */; };
 		F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290420858F5700737388 /* Study_SeshTests.swift */; };
 		F86D291020858F5700737388 /* Study_SeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290F20858F5700737388 /* Study_SeshUITests.swift */; };
+		F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED72582086EE710050B715 /* CalendarViewController.swift */; };
+		F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */; };
+		F8ED725D2086EFBA0050B715 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725C2086EFBA0050B715 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		F86D290B20858F5700737388 /* Study SeshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study SeshUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86D290F20858F5700737388 /* Study_SeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshUITests.swift; sourceTree = "<group>"; };
 		F86D291120858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8ED72582086EE710050B715 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeshViewController.swift; sourceTree = "<group>"; };
+		F8ED725C2086EFBA0050B715 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				F86D28EF20858F5700737388 /* AppDelegate.swift */,
+				F8ED725C2086EFBA0050B715 /* ChatViewController.swift */,
 				F86D28F120858F5700737388 /* AppointmentViewController.swift */,
+				F8ED72582086EE710050B715 /* CalendarViewController.swift */,
+				F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */,
 				F86D28F320858F5700737388 /* Main.storyboard */,
 				F86D28F620858F5700737388 /* Assets.xcassets */,
 				F86D28FB20858F5700737388 /* Info.plist */,
@@ -275,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */,
+				F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */,
 				F86D28F220858F5700737388 /* AppointmentViewController.swift in Sources */,
+				F8ED725D2086EFBA0050B715 /* ChatViewController.swift in Sources */,
 				F86D28F020858F5700737388 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
