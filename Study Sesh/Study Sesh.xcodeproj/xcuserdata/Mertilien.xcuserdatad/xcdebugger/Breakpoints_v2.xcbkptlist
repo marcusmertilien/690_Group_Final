@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study Sesh/AppointmentViewController.swift"
+            timestampString = "545777075.668725"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "AppointmentViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Sesh.AppointmentViewController.__deallocating_deinit"
+                  moduleName = "Study Sesh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mertilien/Documents/Spring2018/CSC690/690_Group_Final/Study%20Sesh/Study%20Sesh/AppointmentViewController.swift"
+                  timestampString = "545776672.948133"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Sesh.AppointmentViewController.__allocating_init(style: __C.UITableViewStyle) -&gt; Study_Sesh.AppointmentViewController"
+                  moduleName = "Study Sesh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mertilien/Documents/Spring2018/CSC690/690_Group_Final/Study%20Sesh/Study%20Sesh/AppointmentViewController.swift"
+                  timestampString = "545776672.9520071"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Sesh.AppointmentViewController.init(style: __C.UITableViewStyle) -&gt; Study_Sesh.AppointmentViewController"
+                  moduleName = "Study Sesh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mertilien/Documents/Spring2018/CSC690/690_Group_Final/Study%20Sesh/Study%20Sesh/AppointmentViewController.swift"
+                  timestampString = "545776672.954604"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Sesh.AppointmentViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Study_Sesh.AppointmentViewController"
+                  moduleName = "Study Sesh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mertilien/Documents/Spring2018/CSC690/690_Group_Final/Study%20Sesh/Study%20Sesh/AppointmentViewController.swift"
+                  timestampString = "545776672.957195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Sesh.AppointmentViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Study_Sesh.AppointmentViewController"
+                  moduleName = "Study Sesh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mertilien/Documents/Spring2018/CSC690/690_Group_Final/Study%20Sesh/Study%20Sesh/AppointmentViewController.swift"
+                  timestampString = "545776672.959751"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "283">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Sesh.AppointmentViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Study_Sesh.AppointmentViewController&gt;"
+                  moduleName = "Study Sesh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mertilien/Documents/Spring2018/CSC690/690_Group_Final/Study%20Sesh/Study%20Sesh/AppointmentViewController.swift"
+                  timestampString = "545776672.962379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Sesh.AppointmentViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Study_Sesh.AppointmentViewController&gt;"
+                  moduleName = "Study Sesh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mertilien/Documents/Spring2018/CSC690/690_Group_Final/Study%20Sesh/Study%20Sesh/AppointmentViewController.swift"
+                  timestampString = "545776672.965059"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study Sesh/SeshCell.swift"
+            timestampString = "545777075.6690969"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "SeshCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study Sesh/SeshCell.swift"
+            timestampString = "545777075.669856"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "SeshCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study Sesh/SeshCell.swift"
+            timestampString = "545777075.67013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "SeshCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
