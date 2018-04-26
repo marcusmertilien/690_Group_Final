@@ -45,4 +45,13 @@ class studySesh: NSObject,NSCoding{
         self.location = ""
         self.time = ""
     }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(location, forKey: PropertyKey.location)
+        aCoder.encode(time, forKey: PropertyKey.time)
+    }
+    
+    //Mark: Archiving Paths
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("seshs")
 }

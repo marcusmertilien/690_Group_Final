@@ -47,12 +47,14 @@ class AppointmentViewController: UITableViewController {
     
     //Temporary Test Data
     private func loadSampleTasks(){
-        let sesh1 = studySesh
+        let sesh1 = studySesh(location: "Lib", time: "3pm")
+        let sesh2 = studySesh(location: "Student Union", time: "12pm")
+        let sesh3 = studySesh(location: "CS Lab", time: "8am")
         
         
-        seshs.append()
-        seshs.append()
-        seshs.append()
+        seshs.append(sesh1!)
+        seshs.append(sesh2!)
+        seshs.append(sesh3!)
         
     }
     
