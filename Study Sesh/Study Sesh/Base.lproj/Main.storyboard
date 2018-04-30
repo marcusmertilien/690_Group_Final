@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xBq-pX-hSP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xvO-dM-e3e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="Y9j-l3-HwB">
@@ -164,6 +172,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hET-dE-TP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2212" y="1693.4032983508248"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="RVo-Yp-1Uo">
+            <objects>
+                <viewController id="xvO-dM-e3e" customClass="LoginViewController" customModule="ChatChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NL9-XE-2Vy"/>
+                        <viewControllerLayoutGuide type="bottom" id="r5q-rf-Vid"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6D1-n1-QVX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Study Sesh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-Sb-2hM">
+                                <rect key="frame" x="0.0" y="107" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="0Ve-64-cPl"/>
+                                    <constraint firstAttribute="width" constant="351" id="bTT-dC-r3L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="42"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bTT-dC-r3L"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-LU-VwM">
+                                <rect key="frame" x="78" y="404" width="219" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="AAO-RG-IVb"/>
+                                    <constraint firstAttribute="height" constant="50" id="IkZ-PL-qQc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.37647058820000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTouch:" destination="xvO-dM-e3e" eventType="touchUpInside" id="As4-hd-W75"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bn0-Pb-qnB">
+                                <rect key="frame" x="78" y="337" width="219" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13373222409999999" green="0.74930501469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.13373222409999999" green="0.74930501469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k7K-Sb-2hM" firstAttribute="width" secondItem="6D1-n1-QVX" secondAttribute="width" id="Jiu-NI-GAr"/>
+                            <constraint firstItem="r5q-rf-Vid" firstAttribute="top" secondItem="4T2-LU-VwM" secondAttribute="bottom" constant="48" id="W1y-AO-jms"/>
+                            <constraint firstItem="k7K-Sb-2hM" firstAttribute="centerX" secondItem="6D1-n1-QVX" secondAttribute="centerX" id="WEG-fB-gP4"/>
+                            <constraint firstItem="k7K-Sb-2hM" firstAttribute="top" secondItem="NL9-XE-2Vy" secondAttribute="bottom" constant="86" id="fdj-48-GGl"/>
+                            <constraint firstItem="4T2-LU-VwM" firstAttribute="centerX" secondItem="k7K-Sb-2hM" secondAttribute="centerX" id="iQd-Vo-1Nu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="44n-ck-xwt"/>
+                    </view>
+                    <connections>
+                        <segue destination="xBq-pX-hSP" kind="show" id="uZV-ge-8VS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7v-Ug-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602.39999999999998" y="330.58470764617692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C7L-Cb-zs6">
