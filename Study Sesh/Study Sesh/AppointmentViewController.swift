@@ -14,6 +14,7 @@ class AppointmentViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadSampleTasks()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -36,10 +37,16 @@ class AppointmentViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{//Writes data to each cell from seshs
         let cellID = "seshCell"
         
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? SeshCell else{
             fatalError("The Dequed cell is not an instance of taskCell.")
         }
-     
+        
+        let sesh = seshs[indexPath.row]
+        
+        cell.Location.text = sesh.location
+        cell.Time.text = sesh.time
+        
         return cell
     }
     
