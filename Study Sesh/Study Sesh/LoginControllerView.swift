@@ -33,16 +33,36 @@ class LoginViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func loginDidTouch(_ sender: AnyObject) {
+        
         if nameField?.text != "" {
+            /*
+            FIRAuth.auth()?.signInAnonymously{ (user, error) in
+                // ...
+                if let error = error {
+                    // ...
+                    print(error.localizedDescription)
+                    return
+                }
+                // User is signed in
+                if let user = user {
+                    let uid = user.uid
+                    let isAnonymous = user.isAnonymous  // true
+                    // ...
+                }
+            }
+    */
+            /*
             Auth.auth().signInAnonymously(completion: { (user, error) in
                 if let err:Error = error {
                     print(err.localizedDescription)
                     return
                 }
+ 
                 
                 self.performSegue(withIdentifier: "Login", sender: nil)
-            })
+            })*/
         }
+ 
     }
     
     // MARK: Navigation

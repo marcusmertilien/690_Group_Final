@@ -183,7 +183,7 @@
         <!--Login View Controller-->
         <scene sceneID="RVo-Yp-1Uo">
             <objects>
-                <viewController id="xvO-dM-e3e" customClass="LoginViewController" customModule="ChatChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xvO-dM-e3e" customClass="LoginViewController" customModule="Study_Sesh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NL9-XE-2Vy"/>
                         <viewControllerLayoutGuide type="bottom" id="r5q-rf-Vid"/>
@@ -192,57 +192,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Study Sesh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-Sb-2hM">
-                                <rect key="frame" x="0.0" y="107" width="375" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="0Ve-64-cPl"/>
-                                    <constraint firstAttribute="width" constant="351" id="bTT-dC-r3L"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Study Sesh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-Sb-2hM">
+                                <rect key="frame" x="78" y="126" width="219" height="67.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="42"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bTT-dC-r3L"/>
-                                    </mask>
-                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-LU-VwM">
-                                <rect key="frame" x="78" y="404" width="219" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="219" id="AAO-RG-IVb"/>
-                                    <constraint firstAttribute="height" constant="50" id="IkZ-PL-qQc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.37647058820000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginDidTouch:" destination="xvO-dM-e3e" eventType="touchUpInside" id="As4-hd-W75"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bn0-Pb-qnB">
-                                <rect key="frame" x="78" y="337" width="219" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xzt-Kg-EdD">
+                                <rect key="frame" x="86" y="300" width="219" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bn0-Pb-qnB">
+                                        <rect key="frame" x="0.0" y="0.0" width="219" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="center" horizontalHuggingPriority="255" verticalHuggingPriority="256" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-LU-VwM">
+                                        <rect key="frame" x="0.0" y="30" width="219" height="36"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="219" id="AAO-RG-IVb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.17254901959999999" green="0.37647058820000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginDidTouch:" destination="xvO-dM-e3e" eventType="touchUpInside" id="As4-hd-W75"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.13373222409999999" green="0.74930501469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.13373222409999999" green="0.74930501469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="k7K-Sb-2hM" firstAttribute="width" secondItem="6D1-n1-QVX" secondAttribute="width" id="Jiu-NI-GAr"/>
-                            <constraint firstItem="r5q-rf-Vid" firstAttribute="top" secondItem="4T2-LU-VwM" secondAttribute="bottom" constant="48" id="W1y-AO-jms"/>
-                            <constraint firstItem="k7K-Sb-2hM" firstAttribute="centerX" secondItem="6D1-n1-QVX" secondAttribute="centerX" id="WEG-fB-gP4"/>
-                            <constraint firstItem="k7K-Sb-2hM" firstAttribute="top" secondItem="NL9-XE-2Vy" secondAttribute="bottom" constant="86" id="fdj-48-GGl"/>
-                            <constraint firstItem="4T2-LU-VwM" firstAttribute="centerX" secondItem="k7K-Sb-2hM" secondAttribute="centerX" id="iQd-Vo-1Nu"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="44n-ck-xwt"/>
                     </view>
                     <connections>
@@ -251,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7v-Ug-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602.39999999999998" y="330.58470764617692"/>
+            <point key="canvasLocation" x="-604" y="329.68515742128938"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C7L-Cb-zs6">
