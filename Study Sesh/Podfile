@@ -1,23 +1,70 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+use_frameworks!
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'Firebase/Analytics'
+pod 'Firebase/AppIndexing'
+pod 'Firebase/Core'
+pod 'Firebase/Crash'
+pod 'Firebase/Database'
+pod 'Firebase/DynamicLinks'
+pod 'Firebase/Messaging'
+pod 'Firebase/RemoteConfig'
+pod 'Firebase/Storage'
+pod 'JSQMessagesViewController'
+
 target 'Study Sesh' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  platform :ios, '11.3'
   use_frameworks!
 
   # Pods for Study Sesh
-  pod 'Firebase/Core'
-  pod 'Firebase/Storage'
+  pod 'Firebase'
   pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/AppIndexing'
+  pod 'Firebase/Core'
+  pod 'Firebase/Crash'
   pod 'Firebase/Database'
+  pod 'Firebase/DynamicLinks'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Storage'
   pod 'JSQMessagesViewController'
   
+  
   target 'Study SeshTests' do
+      pod 'Firebase'
+      pod 'Firebase/Auth'
+      pod 'Firebase/Analytics'
+      pod 'Firebase/AppIndexing'
+      pod 'Firebase/Core'
+      pod 'Firebase/Crash'
+      pod 'Firebase/Database'
+      pod 'Firebase/DynamicLinks'
+      pod 'Firebase/Messaging'
+      pod 'Firebase/RemoteConfig'
+      pod 'Firebase/Storage'
+      pod 'JSQMessagesViewController'
     inherit! :search_paths
     # Pods for testing
   end
 
   target 'Study SeshUITests' do
+      pod 'Firebase'
+      pod 'Firebase/Auth'
+      pod 'Firebase/Analytics'
+      pod 'Firebase/AppIndexing'
+      pod 'Firebase/Core'
+      pod 'Firebase/Crash'
+      pod 'Firebase/Database'
+      pod 'Firebase/DynamicLinks'
+      pod 'Firebase/Messaging'
+      pod 'Firebase/RemoteConfig'
+      pod 'Firebase/Storage'
+      pod 'JSQMessagesViewController'
     inherit! :search_paths
     # Pods for testing
   end
