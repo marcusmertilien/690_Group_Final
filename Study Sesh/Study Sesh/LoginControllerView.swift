@@ -13,7 +13,7 @@ import FirebaseAuth
 import FirebaseCore
 
 class LoginViewController: UIViewController {
-    FirebaseApp.configure()
+
     // MARK: Properties
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var bottomLayoutGuideConstraint: NSLayoutConstraint!
@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         
         if nameField?.text != "" {
             
-            Auth.auth()?.signInAnonymously{ (user, error) in
+            FIRAuth.auth()?.signInAnonymously{ (user, error) in
                 // ...
                 if let error = error {
                     // ...
@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
             }
 
             
-            Auth.auth()?.signInAnonymously(completion: { (user, error) in
+            FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
                 if let err:Error = error {
                     print(err.localizedDescription)
                     return
