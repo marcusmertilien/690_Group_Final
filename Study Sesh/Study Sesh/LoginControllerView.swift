@@ -9,9 +9,11 @@
 import Foundation
 import Firebase
 import UIKit
+import FirebaseAuth
+import FirebaseCore
 
 class LoginViewController: UIViewController {
-    
+    FirebaseApp.configure()
     // MARK: Properties
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var bottomLayoutGuideConstraint: NSLayoutConstraint!
@@ -35,8 +37,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginDidTouch(_ sender: AnyObject) {
         
         if nameField?.text != "" {
-            /*
-            FIRAuth.auth()?.signInAnonymously{ (user, error) in
+            
+            Auth.auth()?.signInAnonymously{ (user, error) in
                 // ...
                 if let error = error {
                     // ...
@@ -50,9 +52,9 @@ class LoginViewController: UIViewController {
                     // ...
                 }
             }
-    */
-            /*
-            Auth.auth().signInAnonymously(completion: { (user, error) in
+
+            
+            Auth.auth()?.signInAnonymously(completion: { (user, error) in
                 if let err:Error = error {
                     print(err.localizedDescription)
                     return
@@ -60,7 +62,7 @@ class LoginViewController: UIViewController {
  
                 
                 self.performSegue(withIdentifier: "Login", sender: nil)
-            })*/
+            })
         }
  
     }
@@ -84,7 +86,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func keyboardWillHideNotification(_ notification: Notification) {
-        bottomLayoutGuideConstraint.constant = 48
+        //bottomLayoutGuideConstraint.constant = 48
     }
 }
 
