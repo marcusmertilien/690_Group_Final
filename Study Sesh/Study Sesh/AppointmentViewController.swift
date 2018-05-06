@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class AppointmentViewController: UITableViewController {
     
@@ -52,7 +53,7 @@ class AppointmentViewController: UITableViewController {
     
     
     
-    //Temporary Test Data
+//Temporary Test Data
     private func loadSampleTasks(){
         let sesh1 = studySesh(location: "Lib", time: "3pm")
         let sesh2 = studySesh(location: "Student Union", time: "12pm")
@@ -63,6 +64,17 @@ class AppointmentViewController: UITableViewController {
         seshs.append(sesh2!)
         seshs.append(sesh3!)
         
+    }
+    
+    
+//Saving Data Locally
+    private func saveSeshs(){
+        let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
+        if goodSave{
+            os_log("Seshs saved.", log: OSLog.default,type: .debug)
+        }else{
+            os_log("Failed to save sehs...", log: OSLog.default, type: .error)
+        }
     }
     
 }
