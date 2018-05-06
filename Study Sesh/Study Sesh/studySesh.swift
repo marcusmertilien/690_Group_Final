@@ -12,6 +12,8 @@ import os.log
 
 class studySesh: NSObject,NSCoding{
     
+    var sesh: studySesh?
+    
     struct PropertyKey{
         static let location = "text"
         static let time = "text"
