@@ -112,7 +112,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New Sesh"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="I1m-eV-bSj"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="AddSesh" id="I1m-eV-bSj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -231,10 +231,14 @@
                                     <navigationItem title="Title" id="qdE-wB-bSF"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-eP-6ch">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="save" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-eP-6ch">
                                 <rect key="frame" x="233" y="285" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="editUnwindSegue:" destination="p4L-Ef-j0V" eventType="touchUpInside" id="oYm-kn-36K"/>
+                                    <segue destination="p4L-Ef-j0V" kind="unwind" unwindAction="editUnwindSegueWithSender:" id="1lN-5Q-epD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -247,9 +251,11 @@
                         <outlet property="Members" destination="XX0-nZ-QMR" id="Aeo-GT-Phg"/>
                         <outlet property="Time" destination="gv0-Nt-UI8" id="cxv-sH-C3b"/>
                         <outlet property="save" destination="cWc-eP-6ch" id="X02-0p-hYF"/>
+                        <segue destination="p4L-Ef-j0V" kind="unwind" identifier="unwindSegue" unwindAction="editUnwindSegueWithSender:" id="4nf-qt-puL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="p4L-Ef-j0V" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3204" y="915.29235382308855"/>
         </scene>

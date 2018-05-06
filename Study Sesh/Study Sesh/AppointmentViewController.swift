@@ -15,7 +15,9 @@ class AppointmentViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleTasks()
+        if let saveSeshs = loadSeshs(){
+            seshs = saveSeshs
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,7 +33,7 @@ class AppointmentViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3    //This value will change pending on how many elements are read from database. i.e list.count from marcus' TODO App
+        return seshs.count   //This value will change pending on how many elements are read from database. i.e list.count from marcus' TODO App
     }
     
     
@@ -51,6 +53,43 @@ class AppointmentViewController: UITableViewController {
         return cell
     }
     
+    
+//Data Handling prior to Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: segue)
+        switch(segue.identifier ?? ""){
+        
+        case "AddSesh":
+            os_log("Adding a new sesh", log: OSLog.default, type: .debug)
+            
+        /*
+        case "EditSesh":
+            We may add the ability to edit sessions later. Holding off currently because what if sessions are synced across multiple devices throughout the database. May be a tricky implementation.*/
+        default:
+            break
+        }
+    }
+    
+//Data Handling post Segue
+    
+    @IBAction func editUnwindSegue(sender: UIStoryboardSegue) {
+        print(sender.source)
+        if let sourceViewController = sender.source as? AddSeshViewController, let sesh = sourceViewController.sesh{
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                //Update an existing task
+                seshs[selectedIndexPath.row] = sesh
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }else{
+                // Add a new sesh.
+                let newIndexPath = IndexPath(row: seshs.count, section: 0)
+                
+                seshs.append(sesh)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+            saveSeshs()
+        }
+    }
     
     
 //Temporary Test Data
@@ -75,6 +114,12 @@ class AppointmentViewController: UITableViewController {
         }else{
             os_log("Failed to save sehs...", log: OSLog.default, type: .error)
         }
+    }
+
+//Loading Local Data
+    private func loadSeshs() -> [studySesh]?{
+        return NSKeyedUnarchiver.unarchiveObject(withFile: studySesh.ArchiveURL.path) as?
+            [studySesh]
     }
     
 }

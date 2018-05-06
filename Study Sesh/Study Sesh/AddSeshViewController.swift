@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import os.log
+
 class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
     @IBOutlet weak var save: UIButton!
@@ -92,6 +94,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         return true
     }
     
+    
     private func updateSaveButton(){
         //Disarm the save button if the text field is empty
         let location = Location.text ?? ""
@@ -107,5 +110,25 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
             !members.isEmpty)
     }
     
+//Prepare for return from segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIButton, button === save else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        guard (sender as? UIButton) != nil else {
+            os_log("Something unforseable has gone wrong", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        let location = Location.text ?? ""
+        let time = Time.text ?? ""
+        //let members = Members.text ?? ""
+        sesh = studySesh(location: location, time: time)
+    }
     
 }
