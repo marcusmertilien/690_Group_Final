@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		001A5BAF209FD57A00CB55AD /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001A5BAE209FD57A00CB55AD /* FirebaseAuth.framework */; };
 		001A5BB1209FD59200CB55AD /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001A5BB0209FD59200CB55AD /* FirebaseAnalytics.framework */; };
 		001A5BB3209FD59800CB55AD /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001A5BB2209FD59800CB55AD /* FirebaseCore.framework */; };
@@ -18,6 +19,10 @@
 		19C9EF3243C6664F4737B319 /* Pods_Study_SeshUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1CCF27F1DDFA84DC55375 /* Pods_Study_SeshUITests.framework */; };
 		1DAF3EFEA42049F191D116FE /* Pods_Study_SeshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430C455829F5F19FE60BC013 /* Pods_Study_SeshTests.framework */; };
 		81D9DFD26B757790C25E2A72 /* Pods_Study_Sesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D36F1F9F224E1971D2BB2F /* Pods_Study_Sesh.framework */; };
+=======
+		F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5802087DD0F00069A8C /* SeshCell.swift */; };
+		F81ED5832087E6EB00069A8C /* studySesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5822087E6EB00069A8C /* studySesh.swift */; };
+>>>>>>> master
 		F86522222086A7050006FEED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522202086A7050006FEED /* Default@2x.png */; };
 		F86522232086A7050006FEED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522212086A7050006FEED /* Default.png */; };
 		F86522272086AC430006FEED /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86522262086AC430006FEED /* Launch Screen.storyboard */; };
@@ -49,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		001A5BAC209FD56200CB55AD /* Firebase 2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Firebase 2"; path = "../../../Downloads/Firebase 2"; sourceTree = "<group>"; };
 		001A5BAE209FD57A00CB55AD /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = "../../../Downloads/Firebase 2/Auth/FirebaseAuth.framework"; sourceTree = "<group>"; };
 		001A5BB0209FD59200CB55AD /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = "../../../Downloads/Firebase 2/Analytics/FirebaseAnalytics.framework"; sourceTree = "<group>"; };
@@ -67,6 +73,10 @@
 		B781B91EC3D55710D049FF24 /* Pods-Study Sesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Sesh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study Sesh/Pods-Study Sesh.release.xcconfig"; sourceTree = "<group>"; };
 		BB01295DC81B670545AD1F7C /* Pods-Study SeshUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study SeshUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study SeshUITests/Pods-Study SeshUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3D36F1F9F224E1971D2BB2F /* Pods_Study_Sesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Sesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		F81ED5802087DD0F00069A8C /* SeshCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeshCell.swift; sourceTree = "<group>"; };
+		F81ED5822087E6EB00069A8C /* studySesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studySesh.swift; sourceTree = "<group>"; };
+>>>>>>> master
 		F86522202086A7050006FEED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F86522212086A7050006FEED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F86522262086AC430006FEED /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -187,6 +197,8 @@
 				0070D3642096B1A5003A61AE /* ChatViewController.swift */,
 				F86D28EF20858F5700737388 /* AppDelegate.swift */,
 				F86D28F120858F5700737388 /* AppointmentViewController.swift */,
+				F81ED5822087E6EB00069A8C /* studySesh.swift */,
+				F81ED5802087DD0F00069A8C /* SeshCell.swift */,
 				F8ED72582086EE710050B715 /* CalendarViewController.swift */,
 				F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */,
 				F86D28F320858F5700737388 /* Main.storyboard */,
@@ -283,6 +295,10 @@
 		F86D28E420858F5700737388 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					location,
+					time,
+				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Mertilien Studios";
@@ -496,9 +512,15 @@
 			files = (
 				F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */,
 				F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */,
+				F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */,
 				F86D28F220858F5700737388 /* AppointmentViewController.swift in Sources */,
+<<<<<<< HEAD
 				0048730A20926CF2005580D7 /* LoginViewController.swift in Sources */,
 				0070D3652096B1A6003A61AE /* ChatViewController.swift in Sources */,
+=======
+				F8ED725D2086EFBA0050B715 /* ChatViewController.swift in Sources */,
+				F81ED5832087E6EB00069A8C /* studySesh.swift in Sources */,
+>>>>>>> master
 				F86D28F020858F5700737388 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
