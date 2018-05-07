@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5802087DD0F00069A8C /* SeshCell.swift */; };
+		F81ED5832087E6EB00069A8C /* studySesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5822087E6EB00069A8C /* studySesh.swift */; };
 		F86522222086A7050006FEED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522202086A7050006FEED /* Default@2x.png */; };
 		F86522232086A7050006FEED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522212086A7050006FEED /* Default.png */; };
 		F86522272086AC430006FEED /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86522262086AC430006FEED /* Launch Screen.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F81ED5802087DD0F00069A8C /* SeshCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeshCell.swift; sourceTree = "<group>"; };
+		F81ED5822087E6EB00069A8C /* studySesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studySesh.swift; sourceTree = "<group>"; };
 		F86522202086A7050006FEED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F86522212086A7050006FEED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F86522262086AC430006FEED /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				F86D28EF20858F5700737388 /* AppDelegate.swift */,
 				F8ED725C2086EFBA0050B715 /* ChatViewController.swift */,
 				F86D28F120858F5700737388 /* AppointmentViewController.swift */,
+				F81ED5822087E6EB00069A8C /* studySesh.swift */,
+				F81ED5802087DD0F00069A8C /* SeshCell.swift */,
 				F8ED72582086EE710050B715 /* CalendarViewController.swift */,
 				F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */,
 				F86D28F320858F5700737388 /* Main.storyboard */,
@@ -210,6 +216,10 @@
 		F86D28E420858F5700737388 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					location,
+					time,
+				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Mertilien Studios";
@@ -286,8 +296,10 @@
 			files = (
 				F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */,
 				F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */,
+				F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */,
 				F86D28F220858F5700737388 /* AppointmentViewController.swift in Sources */,
 				F8ED725D2086EFBA0050B715 /* ChatViewController.swift in Sources */,
+				F81ED5832087E6EB00069A8C /* studySesh.swift in Sources */,
 				F86D28F020858F5700737388 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
