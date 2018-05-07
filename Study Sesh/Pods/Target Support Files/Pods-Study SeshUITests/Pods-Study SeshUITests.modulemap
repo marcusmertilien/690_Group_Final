@@ -1,0 +1,6 @@
+framework module Pods_Study_SeshUITests {
+  umbrella header "Pods-Study SeshUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
