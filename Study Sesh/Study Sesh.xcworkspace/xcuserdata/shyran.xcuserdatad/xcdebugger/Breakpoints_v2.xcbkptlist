@@ -9,62 +9,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Study Sesh/AppointmentViewController.swift"
-            timestampString = "547595204.858483"
+            filePath = "Study Sesh/LoginControllerView.swift"
+            timestampString = "547347649.437678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "AppointmentViewController"
-            landmarkType = "3">
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "loginBtn(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Study Sesh/SignupViewController.swift"
-            timestampString = "547595204.859145"
+            filePath = "Pods/JSQMessagesViewController/JSQMessagesViewController/Model/JSQAudioMediaItem.m"
+            timestampString = "547349069.8217371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "createAccountAction(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Study_Sesh.SignupViewController.createAccountAction(Swift.AnyObject) -&gt; ()"
-                  moduleName = "Study Sesh"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shyran/Documents/690_Group_Final/Study%20Sesh/Study%20Sesh/SignupViewController.swift"
-                  timestampString = "547591455.0126719"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "2664">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.FIRUser&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Study_Sesh.SignupViewController.createAccountAction(Swift.AnyObject) -&gt; ()"
-                  moduleName = "Study Sesh"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shyran/Documents/690_Group_Final/Study%20Sesh/Study%20Sesh/SignupViewController.swift"
-                  timestampString = "547591455.017007"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "62">
-               </Location>
-            </Locations>
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "JSQAudioMediaItem"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

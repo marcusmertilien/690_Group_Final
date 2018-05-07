@@ -1,4 +1,6 @@
 PODS:
+  - Firebase (3.17.0):
+    - Firebase/Core (= 3.17.0)
   - Firebase/Analytics (3.17.0):
     - Firebase/Core
   - Firebase/AppIndexing (3.17.0):
@@ -83,6 +85,7 @@ PODS:
   - Protobuf (3.5.0)
 
 DEPENDENCIES:
+  - Firebase
   - Firebase/Analytics
   - Firebase/AppIndexing
   - Firebase/Auth
@@ -134,6 +137,6 @@ SPEC CHECKSUMS:
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: 2077ab04f76e5f60c17ddb34a1b0345373bcd2f1
+PODFILE CHECKSUM: 222ce9c2c0968035fb1bbcc53a2e71ce31ee31be
 
 COCOAPODS: 1.5.0
