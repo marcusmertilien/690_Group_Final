@@ -8,11 +8,13 @@
 
 import UIKit
 import os.log
+import Firebase
 
 class AppointmentViewController: UITableViewController {
     
     var seshs = [studySesh]()
-
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let saveSeshs = loadSeshs(){
@@ -70,8 +72,23 @@ class AppointmentViewController: UITableViewController {
         }
     }
     
-//Data Handling post Segue
-    
+    //logout firebase
+
+    @IBAction func logOutAction(sender: AnyObject) {
+        if FIRAuth.auth()?.currentUser != nil {
+            do{
+                try FIRAuth.auth()?.signOut()
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "Login")
+                    self.present(vc, animated: true, completion: nil)
+                
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+        
+        }
+    }
+    //Data Handling post Segue
     @IBAction func editUnwindSegue(sender: UIStoryboardSegue) {
         print(sender.source)
         if let sourceViewController = sender.source as? AddSeshViewController, let sesh = sourceViewController.sesh{
@@ -123,4 +140,6 @@ class AppointmentViewController: UITableViewController {
     }
     
 }
+
+
 
