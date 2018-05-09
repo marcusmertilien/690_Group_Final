@@ -8,6 +8,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+
 
 class LoginViewController: UIViewController {
     
@@ -16,13 +18,15 @@ class LoginViewController: UIViewController {
     //@IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUser: UITextField!
     @IBOutlet weak var txtPass: UITextField!
-    
+    //var myRootRef: FIRDatabaseReference
     var handle: FIRAuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         handle = FIRAuth.auth()?.addStateDidChangeListener() { (auth, user) in
@@ -66,6 +70,7 @@ class LoginViewController: UIViewController {
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
+                //FIRDatabase.database().reference().child("users").child((user?.uid)!).setValue(self.txtUser.text)
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "Nav")
                     self.present(vc, animated: true, completion: nil)

@@ -125,6 +125,8 @@ class AppointmentViewController: UITableViewController {
     
 //Saving Data Locally
     private func saveSeshs(){
+   // FIRDatabase.database().reference().child("seshs").child((user?.uid)!).setValue(seshs)
+        //
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
             os_log("Seshs saved.", log: OSLog.default,type: .debug)
