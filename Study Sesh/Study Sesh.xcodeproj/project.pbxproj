@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0012828920A146210019AC74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012828820A146210019AC74 /* LoginViewController.swift */; };
 		0012828B20A146A50019AC74 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012828A20A146A50019AC74 /* SignupViewController.swift */; };
-		0079C32D20A14797000B32E1 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0079C32C20A14797000B32E1 /* logo.png */; };
-		0079C32F20A14BE6000B32E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0079C32E20A14BE6000B32E1 /* GoogleService-Info.plist */; };
 		05B015999860B78F5212D25A /* Pods_Study_SeshUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DE6B687554DE96E1CF1559 /* Pods_Study_SeshUITests.framework */; };
 		50DCBF9B480776774EEC8162 /* Pods_Study_SeshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20D0EA2F461344DCBDE801 /* Pods_Study_SeshTests.framework */; };
 		9CAF00F1887CF690CEE8D427 /* Pods_Study_Sesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139E0A94A1BF97003D028DCC /* Pods_Study_Sesh.framework */; };
@@ -25,6 +23,7 @@
 		F86D28F720858F5700737388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86D28F620858F5700737388 /* Assets.xcassets */; };
 		F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290420858F5700737388 /* Study_SeshTests.swift */; };
 		F86D291020858F5700737388 /* Study_SeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290F20858F5700737388 /* Study_SeshUITests.swift */; };
+		F887614020A3B222004C8482 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F887613F20A3B222004C8482 /* GoogleService-Info.plist */; };
 		F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED72582086EE710050B715 /* CalendarViewController.swift */; };
 		F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */; };
 		F8ED725D2086EFBA0050B715 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725C2086EFBA0050B715 /* ChatViewController.swift */; };
@@ -50,8 +49,6 @@
 /* Begin PBXFileReference section */
 		0012828820A146210019AC74 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0012828A20A146A50019AC74 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		0079C32C20A14797000B32E1 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../logo.png; sourceTree = "<group>"; };
-		0079C32E20A14BE6000B32E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/690_Group_Final-8890d92a495b5c94f6e5da382071ef94a45bff50/Study Sesh/Study Sesh/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00DE6B687554DE96E1CF1559 /* Pods_Study_SeshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_SeshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		139E0A94A1BF97003D028DCC /* Pods_Study_Sesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Sesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		191C3383913F584EC00570CF /* Pods-Study SeshTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study SeshTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study SeshTests/Pods-Study SeshTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +75,7 @@
 		F86D290B20858F5700737388 /* Study SeshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study SeshUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86D290F20858F5700737388 /* Study_SeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshUITests.swift; sourceTree = "<group>"; };
 		F86D291120858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F887613F20A3B222004C8482 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8ED72582086EE710050B715 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeshViewController.swift; sourceTree = "<group>"; };
 		F8ED725C2086EFBA0050B715 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		F86522282086BB480006FEED /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
-				0079C32C20A14797000B32E1 /* logo.png */,
 				F86522212086A7050006FEED /* Default.png */,
 				F86522202086A7050006FEED /* Default@2x.png */,
 			);
@@ -171,7 +168,7 @@
 		F86D28EE20858F5700737388 /* Study Sesh */ = {
 			isa = PBXGroup;
 			children = (
-				0079C32E20A14BE6000B32E1 /* GoogleService-Info.plist */,
+				F887613F20A3B222004C8482 /* GoogleService-Info.plist */,
 				0012828820A146210019AC74 /* LoginViewController.swift */,
 				F86D28EF20858F5700737388 /* AppDelegate.swift */,
 				F8ED725C2086EFBA0050B715 /* ChatViewController.swift */,
@@ -325,12 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F86522222086A7050006FEED /* Default@2x.png in Resources */,
+				F887614020A3B222004C8482 /* GoogleService-Info.plist in Resources */,
 				F86D28F720858F5700737388 /* Assets.xcassets in Resources */,
-				0079C32D20A14797000B32E1 /* logo.png in Resources */,
 				F86522272086AC430006FEED /* Launch Screen.storyboard in Resources */,
 				F86D28F520858F5700737388 /* Main.storyboard in Resources */,
 				F86522232086A7050006FEED /* Default.png in Resources */,
-				0079C32F20A14BE6000B32E1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
