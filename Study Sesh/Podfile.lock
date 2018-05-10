@@ -82,6 +82,7 @@ PODS:
   - JSQMessagesViewController (7.3.5):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - JTAppleCalendar (7.1.5)
   - Protobuf (3.5.0)
 
 DEPENDENCIES:
@@ -97,6 +98,7 @@ DEPENDENCIES:
   - Firebase/RemoteConfig
   - Firebase/Storage
   - JSQMessagesViewController
+  - JTAppleCalendar (~> 7.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -116,6 +118,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - JSQMessagesViewController
     - JSQSystemSoundPlayer
+    - JTAppleCalendar
     - Protobuf
 
 SPEC CHECKSUMS:
@@ -135,8 +138,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: 2cd48640d461326824dd67bada3b2d087752111f
+PODFILE CHECKSUM: 6e2cc51e6ff4119b475671d5db1587d9ea161f84
 
 COCOAPODS: 1.5.0
