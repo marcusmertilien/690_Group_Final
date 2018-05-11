@@ -181,14 +181,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="23E-nb-7mI">
-                                <rect key="frame" x="64" y="129" width="246" height="80"/>
+                                <rect key="frame" x="64.5" y="129" width="246" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="TnY-OP-djh"/>
                                     <constraint firstAttribute="height" constant="80" id="U3b-a3-7ld"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-uD-hiL">
-                                <rect key="frame" x="64" y="273" width="246" height="30"/>
+                                <rect key="frame" x="64.5" y="273" width="246" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="mZr-2L-DGF"/>
                                     <constraint firstAttribute="height" constant="30" id="rMo-Uy-Eq4"/>
@@ -198,7 +198,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWl-m1-whO">
-                                <rect key="frame" x="64" y="318" width="246" height="30"/>
+                                <rect key="frame" x="64.5" y="318.5" width="246" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TNr-sv-k1f"/>
                                     <constraint firstAttribute="width" constant="246" id="cgp-6Y-r6U"/>
@@ -208,7 +208,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h3-Fr-f2k">
-                                <rect key="frame" x="163" y="356" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="356" width="48" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="WBi-QA-23b"/>
@@ -222,7 +222,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmd-r8-qmU">
-                                <rect key="frame" x="163" y="436" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="436" width="48" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vzc-2D-c1v"/>
                                     <constraint firstAttribute="width" constant="48" id="wPG-SB-Ub0"/>
@@ -268,7 +268,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dem-6m-oMe">
-                                <rect key="frame" x="64" y="277" width="246" height="30"/>
+                                <rect key="frame" x="64.5" y="277.5" width="246" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AUY-A9-3te"/>
                                     <constraint firstAttribute="width" constant="246" id="qXy-vt-pqH"/>
@@ -278,7 +278,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xde-NR-QtN">
-                                <rect key="frame" x="64" y="318" width="246" height="30"/>
+                                <rect key="frame" x="64.5" y="318.5" width="246" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="Dx3-0y-HiU"/>
                                     <constraint firstAttribute="height" constant="30" id="azX-zH-mkv"/>
@@ -288,7 +288,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AC-0p-Obt">
-                                <rect key="frame" x="262" y="356" width="48" height="30"/>
+                                <rect key="frame" x="262.5" y="356.5" width="48" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="7oj-Cp-jWc"/>
                                     <constraint firstAttribute="height" constant="30" id="FpG-5v-GE6"/>
@@ -299,7 +299,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hig-Pd-Vyo">
-                                <rect key="frame" x="64" y="131" width="246" height="75"/>
+                                <rect key="frame" x="64.5" y="131" width="246" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="246" id="RsN-ve-4Vw"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="Vr0-WV-P86"/>
@@ -308,7 +308,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dW-hA-ZoA">
-                                <rect key="frame" x="64" y="356" width="48" height="30"/>
+                                <rect key="frame" x="64.5" y="356.5" width="48" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="fTb-Z2-Sxc"/>
                                     <constraint firstAttribute="height" constant="30" id="rvh-IV-XJH"/>
