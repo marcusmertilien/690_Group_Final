@@ -1,29 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
 
 use_frameworks!
-pod 'Firebase'
-pod 'Firebase/Auth'
-pod 'Firebase/Analytics'
-pod 'Firebase/AppIndexing'
-pod 'Firebase/Core'
-pod 'Firebase/Crash'
-pod 'Firebase/Database'
-pod 'Firebase/DynamicLinks'
-pod 'Firebase/Messaging'
-pod 'Firebase/RemoteConfig'
-pod 'Firebase/Storage'
-pod 'JSQMessagesViewController'
-pod 'JTAppleCalendar', '~> 7.0'
+
 
 target 'Study Sesh' do
 
-  # Comment the next line if you're not using Swift and don't want to use dynamic 
-source 'https://github.com/CocoaPods/Specs.git'
-  platform :ios, '11.2'
-  use_frameworks!
-
-  
+  # Comment the next line if you're not using Swift and don't want to use dynamic   
 
   # Pods for Study Sesh
   pod 'Firebase'
@@ -56,9 +41,9 @@ source 'https://github.com/CocoaPods/Specs.git'
       pod 'JSQMessagesViewController'
       pod 'JTAppleCalendar', '~> 7.0'
     inherit! :search_paths
-    # Pods for testing
+    
   end
-
+# Pods for testing
   target 'Study SeshUITests' do
       pod 'Firebase'
       pod 'Firebase/Auth'
@@ -75,7 +60,6 @@ source 'https://github.com/CocoaPods/Specs.git'
       pod 'JTAppleCalendar', '~> 7.0'
 
     inherit! :search_paths
-    # Pods for testing
   end
 
 end

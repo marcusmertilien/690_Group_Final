@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  Study Sesh
 //
@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import JTAppleCalendar
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

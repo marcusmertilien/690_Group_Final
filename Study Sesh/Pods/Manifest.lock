@@ -101,7 +101,7 @@ DEPENDENCIES:
   - JTAppleCalendar (~> 7.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAppIndexing
@@ -141,6 +141,6 @@ SPEC CHECKSUMS:
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: 6e2cc51e6ff4119b475671d5db1587d9ea161f84
+PODFILE CHECKSUM: 82672014b4ae8d23dce35e7634ecc99b8887766e
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2

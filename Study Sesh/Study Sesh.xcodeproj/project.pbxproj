@@ -12,6 +12,7 @@
 		05B015999860B78F5212D25A /* Pods_Study_SeshUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DE6B687554DE96E1CF1559 /* Pods_Study_SeshUITests.framework */; };
 		50DCBF9B480776774EEC8162 /* Pods_Study_SeshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20D0EA2F461344DCBDE801 /* Pods_Study_SeshTests.framework */; };
 		9CAF00F1887CF690CEE8D427 /* Pods_Study_Sesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139E0A94A1BF97003D028DCC /* Pods_Study_Sesh.framework */; };
+		F80A1F2620A50127000C6C2D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A1F2520A50127000C6C2D /* CustomCell.swift */; };
 		F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5802087DD0F00069A8C /* SeshCell.swift */; };
 		F81ED5832087E6EB00069A8C /* studySesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5822087E6EB00069A8C /* studySesh.swift */; };
 		F86522222086A7050006FEED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522202086A7050006FEED /* Default@2x.png */; };
@@ -24,7 +25,7 @@
 		F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290420858F5700737388 /* Study_SeshTests.swift */; };
 		F86D291020858F5700737388 /* Study_SeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290F20858F5700737388 /* Study_SeshUITests.swift */; };
 		F887614020A3B222004C8482 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F887613F20A3B222004C8482 /* GoogleService-Info.plist */; };
-		F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED72582086EE710050B715 /* CalendarViewController.swift */; };
+		F8ED72592086EE710050B715 /* CallendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED72582086EE710050B715 /* CallendarViewController.swift */; };
 		F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */; };
 		F8ED725D2086EFBA0050B715 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725C2086EFBA0050B715 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		924430E542A3994D1D99CD05 /* Pods-Study Sesh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Sesh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study Sesh/Pods-Study Sesh.debug.xcconfig"; sourceTree = "<group>"; };
 		B35530B6756BB068557B9C9D /* Pods-Study SeshUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study SeshUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study SeshUITests/Pods-Study SeshUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD20D0EA2F461344DCBDE801 /* Pods_Study_SeshTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_SeshTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80A1F2520A50127000C6C2D /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		F81ED5802087DD0F00069A8C /* SeshCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeshCell.swift; sourceTree = "<group>"; };
 		F81ED5822087E6EB00069A8C /* studySesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studySesh.swift; sourceTree = "<group>"; };
 		F86522202086A7050006FEED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -76,7 +78,7 @@
 		F86D290F20858F5700737388 /* Study_SeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshUITests.swift; sourceTree = "<group>"; };
 		F86D291120858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F887613F20A3B222004C8482 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F8ED72582086EE710050B715 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		F8ED72582086EE710050B715 /* CallendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarViewController.swift; sourceTree = "<group>"; };
 		F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeshViewController.swift; sourceTree = "<group>"; };
 		F8ED725C2086EFBA0050B715 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F80A1F2920A51241000C6C2D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F80A1F2520A50127000C6C2D /* CustomCell.swift */,
+				F8ED72582086EE710050B715 /* CallendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		F80A1F2A20A51E6B000C6C2D /* Seshs */ = {
+			isa = PBXGroup;
+			children = (
+				F81ED5822087E6EB00069A8C /* studySesh.swift */,
+				F81ED5802087DD0F00069A8C /* SeshCell.swift */,
+			);
+			path = Seshs;
+			sourceTree = "<group>";
+		};
 		F86522282086BB480006FEED /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,11 +191,10 @@
 				F887613F20A3B222004C8482 /* GoogleService-Info.plist */,
 				0012828820A146210019AC74 /* LoginViewController.swift */,
 				F86D28EF20858F5700737388 /* AppDelegate.swift */,
+				F80A1F2A20A51E6B000C6C2D /* Seshs */,
 				F8ED725C2086EFBA0050B715 /* ChatViewController.swift */,
 				F86D28F120858F5700737388 /* AppointmentViewController.swift */,
-				F81ED5822087E6EB00069A8C /* studySesh.swift */,
-				F81ED5802087DD0F00069A8C /* SeshCell.swift */,
-				F8ED72582086EE710050B715 /* CalendarViewController.swift */,
+				F80A1F2920A51241000C6C2D /* Calendar */,
 				F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */,
 				F86D28F320858F5700737388 /* Main.storyboard */,
 				F86D28F620858F5700737388 /* Assets.xcassets */,
@@ -494,7 +513,8 @@
 			files = (
 				0012828B20A146A50019AC74 /* SignupViewController.swift in Sources */,
 				F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */,
-				F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */,
+				F80A1F2620A50127000C6C2D /* CustomCell.swift in Sources */,
+				F8ED72592086EE710050B715 /* CallendarViewController.swift in Sources */,
 				F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */,
 				F86D28F220858F5700737388 /* AppointmentViewController.swift in Sources */,
 				0012828920A146210019AC74 /* LoginViewController.swift in Sources */,
