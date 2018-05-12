@@ -106,55 +106,6 @@
             </objects>
             <point key="canvasLocation" x="1296.8" y="916.1919040479761"/>
         </scene>
-        <!--Callendar View Controller-->
-        <scene sceneID="GYU-jG-5RZ">
-            <objects>
-                <viewController id="Fto-KT-o2q" userLabel="Callendar View Controller" customClass="CalendarViewController" customModule="Study_Sesh" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lf0-yI-jug">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GzM-mC-YND">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGd-9l-sIf">
-                                <rect key="frame" x="160" y="405" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Chat"/>
-                                <connections>
-                                    <segue destination="qph-cx-5Nd" kind="show" id="cML-VT-zwz"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0CC-6g-gyA">
-                                <rect key="frame" x="80" y="161" width="215" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">1	2	3	4	5	6	7
-8	9	10	11	12	13	14
-15	16	17	18	19	20	21
-22	23	24	25	26	27	28
-29	30	31</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSE-N1-GBp">
-                                <rect key="frame" x="142" y="338" width="69" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Sesh"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="AddSesh" id="I1m-eV-bSj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8Gs-r7-p5G"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QVy-jY-hGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2188" y="915.29235382308855"/>
-        </scene>
         <!--Chat View Controller-->
         <scene sceneID="OJz-NU-EYu">
             <objects>
@@ -188,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hET-dE-TP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="1693.4032983508248"/>
+            <point key="canvasLocation" x="1297" y="1743"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="twc-ab-xTn">
@@ -468,8 +419,6 @@
         <image name="logo.png" width="525" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Ta-x0-FQn"/>
         <segue reference="75H-Du-HY3"/>
-        <segue reference="hhY-cw-vT2"/>
     </inferredMetricsTieBreakers>
 </document>
