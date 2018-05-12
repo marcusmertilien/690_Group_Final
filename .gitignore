@@ -34,5 +34,6 @@ xcuserdata/
 
 ###Marcus' Contributions###
 Pods/Pods.xcodeproj/xcuserdata/*
-Study Sesh.xcodeproj/xcuserdata/*
+Study\ /Sesh/Study Sesh.xcworkspace/xcuserdata
+Study\ /Sesh.xcodeproj/xcuserdata/*
 # End of https://www.gitignore.io/api/xcode
