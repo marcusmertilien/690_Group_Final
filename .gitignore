@@ -37,4 +37,8 @@ Pods/Pods.xcodeproj/xcuserdata/*
 Study\ Sesh/Study\ Sesh.xcworkspace/xcuserdata
 Study\ Sesh/Study\ Sesh.xcworkspace/xcuserdata/Mertilien.xcuserdatad/UserInterfaceState.xcuserstate
 Study\ Sesh.xcodeproj/xcuserdata/*
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
 # End of https://www.gitignore.io/api/xcode
