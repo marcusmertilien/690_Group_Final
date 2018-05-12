@@ -27,11 +27,12 @@ class AppointmentViewController: UITableViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintAdjustmentMode = .normal
         self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
+        self.navigationController?.setToolbarHidden(false, animated: animated)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated);
+        self.navigationController?.setToolbarHidden(true, animated: animated)
     }
 
 
@@ -78,8 +79,8 @@ class AppointmentViewController: UITableViewController {
         }
     }
     
+    
     //logout firebase
-
     @IBAction func logOutAction(sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil {
             do{
@@ -94,6 +95,8 @@ class AppointmentViewController: UITableViewController {
         
         }
     }
+    
+    
     //Data Handling post Segue
     @IBAction func editUnwindSegue(sender: UIStoryboardSegue) {
         print(sender.source)
