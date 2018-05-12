@@ -11,8 +11,9 @@ import os.log
 
 class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
-    @IBOutlet weak var save: UIButton!
+   
     
+    @IBOutlet weak var save: UIBarButtonItem!
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
     @IBOutlet weak var Members: UITextField!
@@ -39,7 +40,9 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.toolbar.isHidden = false
+    }
    
     
    
