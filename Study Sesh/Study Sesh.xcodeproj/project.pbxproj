@@ -24,6 +24,7 @@
 		F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290420858F5700737388 /* Study_SeshTests.swift */; };
 		F86D291020858F5700737388 /* Study_SeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290F20858F5700737388 /* Study_SeshUITests.swift */; };
 		F887614020A3B222004C8482 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F887613F20A3B222004C8482 /* GoogleService-Info.plist */; };
+		F8EC609320A75FFF005A04CB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EC609220A75FFE005A04CB /* logo.png */; };
 		F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED72582086EE710050B715 /* CalendarViewController.swift */; };
 		F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */; };
 		F8ED725D2086EFBA0050B715 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725C2086EFBA0050B715 /* ChatViewController.swift */; };
@@ -76,6 +77,7 @@
 		F86D290F20858F5700737388 /* Study_SeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshUITests.swift; sourceTree = "<group>"; };
 		F86D291120858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F887613F20A3B222004C8482 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8EC609220A75FFE005A04CB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		F8ED72582086EE710050B715 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeshViewController.swift; sourceTree = "<group>"; };
 		F8ED725C2086EFBA0050B715 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		F86522282086BB480006FEED /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F8EC609220A75FFE005A04CB /* logo.png */,
 				F86522212086A7050006FEED /* Default.png */,
 				F86522202086A7050006FEED /* Default@2x.png */,
 			);
@@ -325,6 +328,7 @@
 				F887614020A3B222004C8482 /* GoogleService-Info.plist in Resources */,
 				F86D28F720858F5700737388 /* Assets.xcassets in Resources */,
 				F86522272086AC430006FEED /* Launch Screen.storyboard in Resources */,
+				F8EC609320A75FFF005A04CB /* logo.png in Resources */,
 				F86D28F520858F5700737388 /* Main.storyboard in Resources */,
 				F86522232086A7050006FEED /* Default.png in Resources */,
 			);
