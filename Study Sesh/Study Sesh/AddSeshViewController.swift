@@ -11,17 +11,21 @@ import os.log
 
 class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
-    @IBOutlet weak var save: UIButton!
+   
     
+    @IBOutlet weak var save: UIBarButtonItem!
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
     @IBOutlet weak var Members: UITextField!
     
     var sesh: studySesh?
     
+    let datePicker = UIDatePicker()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        createDatePicker()
         //Disable Save Button From Begining
         save.isEnabled = false
         
@@ -36,6 +40,38 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.toolbar.isHidden = false
+    }
+   
+    
+   
+    
+    func createDatePicker(){
+        //Toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //Done button
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([done], animated: false)
+        
+        Time.inputAccessoryView = toolbar
+        Time.inputView = datePicker
+        
+        //Format Picker
+        datePicker.datePickerMode = .time
+    }
+    
+    @objc func donePressed(){
+        //Format Date
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        let dateString = formatter.string(from: datePicker.date)
+        Time.text = "\(dateString)"
+        self.view.endEditing(true)
+    }
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField){
         //Disable the Save button while editing.
