@@ -118,8 +118,6 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }else if (sender == Members){
             print (" \nMembers text Field Did End Editing")
         }
-        
-        navigationItem.title = sender.text
     }
     
     
@@ -151,12 +149,12 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         super.prepare(for: segue, sender: sender)
         
         // Configure the destination view controller only when the save button is pressed.
-        guard let button = sender as? UIButton, button === save else {
+        guard let button = sender as? UIBarButtonItem, button === save else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
         
-        guard (sender as? UIButton) != nil else {
+        guard (sender as? UIBarButtonItem) != nil else {
             os_log("Something unforseable has gone wrong", log: OSLog.default, type: .debug)
             return
         }

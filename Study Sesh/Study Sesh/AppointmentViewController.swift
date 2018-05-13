@@ -71,9 +71,19 @@ class AppointmentViewController: UITableViewController {
         case "AddSesh":
             os_log("Adding a new sesh", log: OSLog.default, type: .debug)
             
-        /*
         case "EditSesh":
-            We may add the ability to edit sessions later. Holding off currently because what if sessions are synced across multiple devices throughout the database. May be a tricky implementation.*/
+           /* We may add the ability to edit sessions later. Holding off currently because what if sessions are synced across multiple devices throughout the database. May be a tricky implementation.*/
+            
+            os_log("Edit a new task", log: OSLog.default, type: .debug)
+            let editController =  segue.destination as! AddSeshViewController
+            
+            let selectedSeshCell = sender as? SeshCell
+            
+            let indexPath = tableView.indexPath(for: selectedSeshCell!)
+            
+            let selectedSesh = seshs[(indexPath?.row)!]
+            editController.sesh = selectedSesh
+            
         default:
             break
         }
@@ -106,6 +116,7 @@ class AppointmentViewController: UITableViewController {
                 //Update an existing task
                 seshs[selectedIndexPath.row] = sesh
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
+                
             }else{
                 // Add a new sesh.
                 let newIndexPath = IndexPath(row: seshs.count, section: 0)
