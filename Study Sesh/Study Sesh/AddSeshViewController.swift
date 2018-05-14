@@ -13,7 +13,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
    
     
-    @IBOutlet weak var save: UIBarButtonItem!
+    @IBOutlet weak var save: UIButton!
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
     @IBOutlet weak var Members: UITextField!
@@ -40,9 +40,9 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.toolbar.isHidden = false
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        //navigationController?.toolbar.isHidden = false
+//    }
    
     
    
@@ -146,16 +146,18 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
     
 //Prepare for return from segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
+        //super.prepare(for: segue, sender: sender)
         
         // Configure the destination view controller only when the save button is pressed.
         guard let button = sender as? UIBarButtonItem, button === save else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+          
             return
         }
         
         guard (sender as? UIBarButtonItem) != nil else {
             os_log("Something unforseable has gone wrong", log: OSLog.default, type: .debug)
+            
             return
         }
         

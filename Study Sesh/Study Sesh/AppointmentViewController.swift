@@ -9,11 +9,15 @@
 import UIKit
 import os.log
 import Firebase
+import FirebaseDatabase
 
 class AppointmentViewController: UITableViewController {
     
     var seshs = [studySesh]()
    
+    //var ref =  DatabaseReference!
+        
+    //ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +25,21 @@ class AppointmentViewController: UITableViewController {
             seshs = saveSeshs
         }
         // Do any additional setup after loading the view, typically from a nib.
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.tintAdjustmentMode = .normal
-        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
-        self.navigationController?.setToolbarHidden(false, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated);
-        self.navigationController?.setToolbarHidden(true, animated: animated)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//       // super.viewWillAppear(animated)
+//       // self.navigationController?.navigationBar.tintAdjustmentMode = .normal
+//       // self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
+//
+//       // self.navigationController?.setToolbarHidden(false, animated: animated)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        //super.viewWillDisappear(animated);
+//        //self.navigationController?.setToolbarHidden(true, animated: animated)
+//    }
 
 
 //Table Cells
@@ -145,7 +151,9 @@ class AppointmentViewController: UITableViewController {
     
 //Saving Data Locally
     private func saveSeshs(){
-   // FIRDatabase.database().reference().child("seshs").child((user?.uid)!).setValue(seshs)
+
+
+    //FIRDatabase.database().reference().child("seshs").child((user?.uid)!).setValue(seshs)
         //
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
