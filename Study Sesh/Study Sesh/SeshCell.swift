@@ -12,9 +12,7 @@ class SeshCell: UITableViewCell{
     
     @IBOutlet weak var Location: UILabel!
     @IBOutlet weak var Time: UILabel!
-    
-    
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
     }

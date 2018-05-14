@@ -9,12 +9,13 @@
 import UIKit
 import os.log
 import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class AppointmentViewController: UITableViewController {
     
     var seshs = [studySesh]()
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let saveSeshs = loadSeshs(){
@@ -134,14 +135,24 @@ class AppointmentViewController: UITableViewController {
     
 //Saving Data Locally
     private func saveSeshs(){
-   // FIRDatabase.database().reference().child("seshs").child((user?.uid)!).setValue(seshs)
-        //
+        
+        let loc = seshs[0].location
+        let tim = seshs[0].time
+        
+        let userID = FIRAuth.auth()?.currentUser!.uid
+        
+        
+        DBfirebase.Instance.saveSesh(withID: userID!, loc: loc!,time: tim!)
+        
+        
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
             os_log("Seshs saved.", log: OSLog.default,type: .debug)
         }else{
             os_log("Failed to save sehs...", log: OSLog.default, type: .error)
         }
+ 
+ 
     }
 
 //Loading Local Data

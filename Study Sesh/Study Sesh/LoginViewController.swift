@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     
@@ -33,7 +34,12 @@ class LoginViewController: UIViewController {
             print(auth)
             if let user = user {
                 print(user)
-       
+            
+            }
+            if FIRAuth.auth()?.currentUser != nil{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "Nav")
+                self.present(vc, animated: true, completion: nil)
             }
         }
     }

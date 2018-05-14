@@ -65,7 +65,8 @@ class SignupViewController: UIViewController {
                 if error == nil {
                     print("You have successfully signed up")
                 
-                    FIRDatabase.database().reference().child("users").child((user?.uid)!).setValue(users)
+                    //FIRDatabase.database().reference().child("users").child((user?.uid)!).setValue(users)
+                    DBfirebase.Instance.saveUser(withID: user!.uid, email: users!,password: pass!)
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "Nav")
                     self.present(vc, animated: true, completion: nil)
