@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  Study Sesh
 //
@@ -22,22 +21,7 @@ class AppointmentViewController: UITableViewController {
         if let saveSeshs = loadSeshs(){
             seshs = saveSeshs
         }
-        // Do any additional setup after loading the view, typically from a nib.
-        //self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-
-//    override func viewWillAppear(_ animated: Bool) {
-//       // super.viewWillAppear(animated)
-//       // self.navigationController?.navigationBar.tintAdjustmentMode = .normal
-//       // self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
-//
-//       // self.navigationController?.setToolbarHidden(false, animated: animated)
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        //super.viewWillDisappear(animated);
-//        //self.navigationController?.setToolbarHidden(true, animated: animated)
-//    }
 
 
 //Table Cells
@@ -46,7 +30,7 @@ class AppointmentViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return seshs.count   //This value will change pending on how many elements are read from database. i.e list.count from marcus' TODO App
+        return seshs.count   //This value will change pending on how many elements are read from database. i.e list.count
     }
     
     
@@ -76,8 +60,6 @@ class AppointmentViewController: UITableViewController {
             os_log("Adding a new sesh", log: OSLog.default, type: .debug)
             
         case "EditSesh":
-           /* We may add the ability to edit sessions later. Holding off currently because what if sessions are synced across multiple devices throughout the database. May be a tricky implementation.*/
-            
             os_log("Edit a new task", log: OSLog.default, type: .debug)
             let editController =  segue.destination as! AddSeshViewController
             
