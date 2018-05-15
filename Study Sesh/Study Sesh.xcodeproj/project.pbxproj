@@ -18,6 +18,9 @@
 		19C9EF3243C6664F4737B319 /* Pods_Study_SeshUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F1CCF27F1DDFA84DC55375 /* Pods_Study_SeshUITests.framework */; };
 		1DAF3EFEA42049F191D116FE /* Pods_Study_SeshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430C455829F5F19FE60BC013 /* Pods_Study_SeshTests.framework */; };
 		81D9DFD26B757790C25E2A72 /* Pods_Study_Sesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D36F1F9F224E1971D2BB2F /* Pods_Study_Sesh.framework */; };
+
+		F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5802087DD0F00069A8C /* SeshCell.swift */; };
+		F81ED5832087E6EB00069A8C /* studySesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81ED5822087E6EB00069A8C /* studySesh.swift */; };
 		F86522222086A7050006FEED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522202086A7050006FEED /* Default@2x.png */; };
 		F86522232086A7050006FEED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F86522212086A7050006FEED /* Default.png */; };
 		F86522272086AC430006FEED /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86522262086AC430006FEED /* Launch Screen.storyboard */; };
@@ -68,6 +71,9 @@
 		B781B91EC3D55710D049FF24 /* Pods-Study Sesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Sesh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study Sesh/Pods-Study Sesh.release.xcconfig"; sourceTree = "<group>"; };
 		BB01295DC81B670545AD1F7C /* Pods-Study SeshUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study SeshUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study SeshUITests/Pods-Study SeshUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3D36F1F9F224E1971D2BB2F /* Pods_Study_Sesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Sesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		F81ED5802087DD0F00069A8C /* SeshCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeshCell.swift; sourceTree = "<group>"; };
+		F81ED5822087E6EB00069A8C /* studySesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studySesh.swift; sourceTree = "<group>"; };
 		F86522202086A7050006FEED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F86522212086A7050006FEED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F86522262086AC430006FEED /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -509,6 +515,8 @@
 				F8ED72592086EE710050B715 /* CalendarViewController.swift in Sources */,
 				F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */,
 				F86D28F220858F5700737388 /* AppointmentViewController.swift in Sources */,
+				0048730A20926CF2005580D7 /* LoginViewController.swift in Sources */,
+				0070D3652096B1A6003A61AE /* ChatViewController.swift in Sources */,
 				0048730A20926CF2005580D7 /* LoginViewController.swift in Sources */,
 				0070D3652096B1A6003A61AE /* ChatViewController.swift in Sources */,
 				F86D28F020858F5700737388 /* AppDelegate.swift in Sources */,
