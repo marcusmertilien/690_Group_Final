@@ -147,13 +147,6 @@ class AppointmentViewController: UITableViewController {
     
 //Saving Data Locally
     private func saveSeshs(){
-
-      //  let arrSize = seshs.count
-        
-        
-        //let userID = FIRAuth.auth()?.currentUser!.uid
-        //let seshID = Fir
-
         
         for(_,element) in seshs.enumerated(){
             let loc = element.location
@@ -164,13 +157,13 @@ class AppointmentViewController: UITableViewController {
             
         }
         
-//        let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
-//        if goodSave{
-//            os_log("Seshs saved.", log: OSLog.default,type: .debug)
-//        }else{
-//            os_log("Failed to save sehs...", log: OSLog.default, type: .error)
-//        }
-//         
+        let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
+        if goodSave{
+            os_log("Seshs saved.", log: OSLog.default,type: .debug)
+        }else{
+            os_log("Failed to save sehs...", log: OSLog.default, type: .error)
+        }
+        
  
  
  
