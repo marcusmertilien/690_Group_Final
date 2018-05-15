@@ -6,7 +6,6 @@ UPON APROVAL, CHANGES WILL BE ADDED TO MASTER.**
 
 
 Marcus Mertilien
-Teodora Caneva
 Shayan Mojtabavi
 
 **Milestone 1: 04/03/16** ✅
@@ -46,3 +45,10 @@ Shayan Mojtabavi
 + Integrate with the UI
 (Equal contribution from each member)
 
+**Final State: 05/15/18**
++ Chat Room
++ Appointment View
++ Add Event View
+
+**App Description:**
++ We have developed an application with the student in mind. Our application is designed to make linking up with your friends and teammates for study sessions much easier. The app facilitates an environment in which users can set appointments with location and times that link to a chat room where everyone subscribed to that chat room can communicate freely.
