@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xvO-dM-e3e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hHY-zU-081">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
 
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -11,14 +12,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-DemiBold</string>
-        </array>
-        <array key="Noteworthy.ttc">
-            <string>Noteworthy-Light</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="Y9j-l3-HwB">
@@ -190,15 +183,11 @@
             </objects>
             <point key="canvasLocation" x="2961" y="1693"/>
         </scene>
-        <!--Login View Controller-->
-        <scene sceneID="RVo-Yp-1Uo">
+        <!--LoginViewController-->
+        <scene sceneID="twc-ab-xTn">
             <objects>
-                <viewController id="xvO-dM-e3e" customClass="LoginViewController" customModule="Study_Sesh" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NL9-XE-2Vy"/>
-                        <viewControllerLayoutGuide type="bottom" id="r5q-rf-Vid"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6D1-n1-QVX">
+                <viewController storyboardIdentifier="Login" title="LoginViewController" id="hHY-zU-081" customClass="LoginViewController" customModule="Study_Sesh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Login" id="ZVh-Cq-za1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -209,13 +198,13 @@
                                 <rect key="frame" x="64.5" y="269" width="246" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWl-m1-whO">
                                 <rect key="frame" x="64.5" y="314" width="246" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmd-r8-qmU">
                                 <rect key="frame" x="156" y="409.5" width="62" height="33"/>
@@ -227,11 +216,6 @@
                                 <state key="normal" title="Signup">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="VNd-MX-iFK" kind="show" id="xvH-Ls-9U9"/>
                                 </connections>
@@ -339,10 +323,6 @@
                                     <segue destination="hHY-zU-081" kind="show" id="lPx-5m-Mke"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xzt-Kg-EdD">
-                                <rect key="frame" x="74" y="173" width="227" height="243"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.63551123060000003" green="0.99667916720000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -364,13 +344,13 @@
                         <viewLayoutGuide key="safeArea" id="H0U-oZ-rlM"/>
                     </view>
                     <connections>
-                        <outlet property="txtPass" destination="Bn0-Pb-qnB" id="uXc-ML-1NB"/>
-                        <outlet property="txtUser" destination="XxD-As-uAt" id="TkS-q5-paI"/>
+                        <outlet property="txtPass" destination="xde-NR-QtN" id="nPg-c8-6D4"/>
+                        <outlet property="txtUser" destination="dem-6m-oMe" id="Iah-hn-cEk"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D7v-Ug-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccb-f7-kN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-879.20000000000005" y="311.69415292353824"/>
+            <point key="canvasLocation" x="-895.20000000000005" y="1100.5997001499252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C7L-Cb-zs6">
