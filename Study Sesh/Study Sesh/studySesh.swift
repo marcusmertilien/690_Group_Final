@@ -26,7 +26,7 @@ class studySesh: NSObject,NSCoding{
                 return nil
         }
         
-        guard let time = aDecoder.decodeObject(forKey: PropertyKey.location) as? String
+        guard let time = aDecoder.decodeObject(forKey: PropertyKey.time) as? String
             else{
                 os_log("Unable to decode the info for a task object", log: OSLog.default, type: .debug)
                 return nil

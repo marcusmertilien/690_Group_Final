@@ -135,14 +135,17 @@ class AppointmentViewController: UITableViewController {
     
 //Saving Data Locally
     private func saveSeshs(){
+      //  let arrSize = seshs.count
         
-        let loc = seshs[0].location
-        let tim = seshs[0].time
         
         let userID = FIRAuth.auth()?.currentUser!.uid
+        for(_,element) in seshs.enumerated(){
+            let loc = element.location
+            let tim = element.time
+            DBfirebase.Instance.saveSesh(withID: userID!, loc: loc!,time: tim!)
+        }
         
-        
-        DBfirebase.Instance.saveSesh(withID: userID!, loc: loc!,time: tim!)
+       
         
         
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)

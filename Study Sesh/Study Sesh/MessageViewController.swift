@@ -10,15 +10,19 @@ import UIKit
 import JSQMessagesViewController
 import MobileCoreServices
 import AVKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class MessageViewController: JSQMessagesViewController {
     private var messages = [JSQMessage]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.senderId = "1"
-        self.senderDisplayName = "jack"
+        let userID = FIRAuth.auth()?.currentUser!.uid
+        let email = FIRAuth.auth()?.currentUser!.email
+        self.senderId = userID
+        self.senderDisplayName = email
         // Do any additional setup after loading the view.
     }
     
@@ -28,9 +32,11 @@ class MessageViewController: JSQMessagesViewController {
         //let message = messages[indexPath.item]
         return bubbleFactory?.outgoingMessagesBubbleImage(with: UIColor.blue)
     }
+    
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         return JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named:"profile"), diameter: 30)
     }
+    
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.item]
     }

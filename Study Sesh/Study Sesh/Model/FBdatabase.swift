@@ -46,7 +46,7 @@ class DBfirebase{
     }
     
     func getContacts(){
-        let userID = FIRAuth.auth()?.currentUser!.uid
+        //let userID = FIRAuth.auth()?.currentUser!.uid
         var con = [Contact]();
         seshsRef.observeSingleEvent(of: FIRDataEventType.value){
             //userRef.observeSingleEvent(of: FIRDataEventType.value){
@@ -54,9 +54,11 @@ class DBfirebase{
             if let myContacts = snapshot.value as? NSDictionary{
                 for (key,value) in myContacts{
                     if let contactData = value as? NSDictionary{
-                        if let email = contactData["time"] as? String{
+                        if let email = contactData["location"] as? String{
+                            if let time = contactData["time"] as? String{
                             let id = key as! String;
-                            let newContact = Contact(id: id, name:email);
+                            
+                            let newContact = Contact(id: id, name:email,time:time);
                             con.append(newContact)
                         }
                     }
@@ -67,4 +69,5 @@ class DBfirebase{
         
     }
    
+}
 }
