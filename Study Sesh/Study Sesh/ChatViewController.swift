@@ -1,116 +1,58 @@
+//
+//  ChatViewController.swift
+//  Study Sesh
+//
+//  Created by Shyran on 5/13/18.
+//  Copyright © 2018 Mertilien Studios. All rights reserved.
+//
+
+import Foundation
+import UIKit
+import Firebase
 
 
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
-  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
-
-
-
-  <link crossorigin="anonymous" media="all" integrity="sha512-/C1PeErbUhWWKymLsH9YK5vZCjBhjSijY+KL4QNiEal3w67QgnI6yiVT0DK8DPVw+IBJnVzF3zaMViV6Dbm9hA==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-d83d349f179c680b2beb431ca4362f9f.css" />
-  <link crossorigin="anonymous" media="all" integrity="sha512-s8gtUCQADtfctIBspyFVUayzGX7kbK+w0nIeV7gp8DZLI7IBWjEJMyyN9nxeFKogu9/ZYmdhtrqKp+xeMuVXEw==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-393fa18b1758491727794aa1b8bdff7a.css" />
-  
-  
-  
-  
-
-  <meta name="viewport" content="width=device-width">
-  
-  <title>690_Group_Final/ChatViewController.swift at feat_AppointmentTableView · marcusmertilien/690_Group_Final</title>
-    <meta name="description" content="GitHub is where people build software. More than 27 million people use GitHub to discover, fork, and contribute to over 80 million projects.">
-  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-  <meta property="fb:app_id" content="1401488693436528">
-
+class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, FetchData{
+    @IBOutlet weak var myTable: UITableView!
+    private var contacts = [Contact]();
+    private var CHAT_SUGUE = "ChatSegue";
     
-    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/28063892?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="marcusmertilien/690_Group_Final" /><meta property="og:url" content="https://github.com/marcusmertilien/690_Group_Final" /><meta property="og:description" content="Contribute to 690_Group_Final development by creating an account on GitHub." />
-
-  <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MjY3MjI1ODkzOjZkMzU5NmE0OTg2MWFkNTY0ZmVmMzEyNWJiZDkxMDkzMTU0YThhNTQ3N2MyN2NlODljNGQ1YzBkZWZiMTcxOGI=--0bc1cf2a63192a4a40b848d4abe8bb2aaf1c56ef">
-  <meta name="pjax-timeout" content="1000">
-  <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="CB01:74BE:1DEDFFD:1E0EED1:5AE67906" data-pjax-transient>
-
-
-  
-
-  <meta name="selected-link" value="repo_source" data-pjax-transient>
-
-    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
-  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
-    <meta name="google-analytics" content="UA-3769691-2">
-
-<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="CB01:74BE:1DEDFFD:1E0EED1:5AE67906" /><meta name="octolytics-dimension-region_edge" content="sea" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="17556285" /><meta name="octolytics-actor-login" content="shymoj" /><meta name="octolytics-actor-hash" content="373ca4b6cfb9f3e33357cb82ee0378d30206df3c0b14cb99b875f92419797f57" />
-<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
-
-
-
-
-  <meta class="js-ga-set" name="dimension1" content="Logged In">
-
-
-  
-
-      <meta name="hostname" content="github.com">
-    <meta name="user-login" content="shymoj">
-
-      <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="NzAzNmVlNGM2YWMyNWRlOTkzMDkyZjZhN2Q1N2Q1YWQxN2IyNTlhNTg4OGZiMzMwMGUyZWRiZTRhYjFhODAzN3x7InJlbW90ZV9hZGRyZXNzIjoiMTc0LjYyLjc4LjciLCJyZXF1ZXN0X2lkIjoiQ0IwMTo3NEJFOjFERURGRkQ6MUUwRUVEMTo1QUU2NzkwNiIsInRpbWVzdGFtcCI6MTUyNTA1MzcwOCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
-
-    <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_SELF_SERVE,MARKETPLACE_FREE_APPS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
-
-  <meta name="html-safe-nonce" content="667631a12457fa02d97aa1d188f354336138fb24">
-
-  <meta http-equiv="x-pjax-version" content="f88fe8455c7d2f72adf569476ff8a8cb">
-  
-
-      <link href="https://github.com/marcusmertilien/690_Group_Final/commits/feat_AppointmentTableView.atom" rel="alternate" title="Recent Commits to 690_Group_Final:feat_AppointmentTableView" type="application/atom+xml">
-
-  <meta name="description" content="Contribute to 690_Group_Final development by creating an account on GitHub.">
-  <meta name="go-import" content="github.com/marcusmertilien/690_Group_Final git https://github.com/marcusmertilien/690_Group_Final.git">
-
-  <meta name="octolytics-dimension-user_id" content="28063892" /><meta name="octolytics-dimension-user_login" content="marcusmertilien" /><meta name="octolytics-dimension-repository_id" content="127983714" /><meta name="octolytics-dimension-repository_nwo" content="marcusmertilien/690_Group_Final" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="127983714" /><meta name="octolytics-dimension-repository_network_root_nwo" content="marcusmertilien/690_Group_Final" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
-
-
-    <link rel="canonical" href="https://github.com/marcusmertilien/690_Group_Final/blob/feat_AppointmentTableView/Study%20Sesh/Study%20Sesh/ChatViewController.swift" data-pjax-transient>
-
-
-  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-
-  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-
-  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
-  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
-
-<meta name="theme-color" content="#1e2327">
-
-
-  <meta name="u2f-support" content="true">
-
-<link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
-
-  </head>
-
-  <body class="logged-in env-production emoji-size-boost page-blob">
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DBfirebase.Instance.delegate = self;
+        DBfirebase.Instance.getContacts();
+    }
+    func dataReceived(contacts:[Contact]) {
+        self.contacts = contacts;
+        
+        for contact in contacts{
+            if contact.id == FBAuth.Instance.userID(){
+                
+            }
+        }
+        
+        myTable.reloadData();
+    }
+    
+    func tableView(in tableView: UITableView) -> Int{
+        return 1;
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count;
+    }
+    
     
 
-  <div class="position-relative js-header-wrapper ">
-    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
-    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = contacts[indexPath.row].name + " @ " + contacts[indexPath.row].time
+        return cell;
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: CHAT_SUGUE, sender: nil)
+    }
     
     
 

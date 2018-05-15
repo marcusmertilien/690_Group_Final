@@ -8,20 +8,28 @@
 
 import UIKit
 import os.log
+import Foundation
+import Firebase
+import FirebaseDatabase
 
 class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
+   
+
     @IBOutlet weak var save: UIButton!
-    
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
     @IBOutlet weak var Members: UITextField!
     
     var sesh: studySesh?
     
+    let datePicker = UIDatePicker()
+    let memberPicker = UIPickerView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        createDatePicker()
         //Disable Save Button From Begining
         save.isEnabled = false
         
@@ -36,6 +44,47 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }
         
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        //navigationController?.toolbar.isHidden = false
+//    }
+   
+    func createMemberPicker(){
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //Done button
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([done], animated: false)
+        
+    }
+    
+   
+    
+    func createDatePicker(){
+        //Toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //Done button
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([done], animated: false)
+        
+        Time.inputAccessoryView = toolbar
+        Time.inputView = datePicker
+        
+        //Format Picker
+        datePicker.datePickerMode = .time
+    }
+    
+    @objc func donePressed(){
+        //Format Date
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        let dateString = formatter.string(from: datePicker.date)
+        Time.text = "\(dateString)"
+        self.view.endEditing(true)
+    }
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField){
         //Disable the Save button while editing.
@@ -82,8 +131,6 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }else if (sender == Members){
             print (" \nMembers text Field Did End Editing")
         }
-        
-        navigationItem.title = sender.text
     }
     
     
@@ -112,22 +159,25 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
     
 //Prepare for return from segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
+        //super.prepare(for: segue, sender: sender)
         
         // Configure the destination view controller only when the save button is pressed.
-        guard let button = sender as? UIButton, button === save else {
+        guard let button = sender as? UIBarButtonItem, button === save else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+          
             return
         }
         
-        guard (sender as? UIButton) != nil else {
+        guard (sender as? UIBarButtonItem) != nil else {
             os_log("Something unforseable has gone wrong", log: OSLog.default, type: .debug)
+            
             return
         }
         
         let location = Location.text ?? ""
         let time = Time.text ?? ""
         //let members = Members.text ?? ""
+        
         sesh = studySesh(location: location, time: time)
     }
     
