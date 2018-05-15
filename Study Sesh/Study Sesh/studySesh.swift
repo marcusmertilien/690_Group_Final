@@ -9,7 +9,6 @@
 import UIKit
 import os.log
 
-
 class studySesh: NSObject,NSCoding{
     
     var sesh: studySesh?

@@ -154,10 +154,13 @@ class AppointmentViewController: UITableViewController {
         
         
         let userID = FIRAuth.auth()?.currentUser!.uid
+        let seshID = Fir
+        
         for(_,element) in seshs.enumerated(){
             let loc = element.location
             let tim = element.time
             DBfirebase.Instance.saveSesh(withID: userID!, loc: loc!,time: tim!)
+            
         }
 
 

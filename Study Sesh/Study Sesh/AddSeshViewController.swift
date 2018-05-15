@@ -14,12 +14,6 @@ import FirebaseDatabase
 
 class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
-   
-    
-<<<<<<< HEAD
-    //@IBOutlet weak var save: UIBarButtonItem!
-=======
->>>>>>> feat_Cosmetics
     @IBOutlet weak var save: UIButton!
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
