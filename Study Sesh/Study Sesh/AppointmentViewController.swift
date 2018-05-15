@@ -158,9 +158,9 @@ class AppointmentViewController: UITableViewController {
         for(_,element) in seshs.enumerated(){
             let loc = element.location
             let tim = element.time
-            let cou = element.course
+            let course = element.course
             
-            DBfirebase.Instance.saveSesh(withID: cou!, loc: loc!,time: tim!,course: cou!)
+            DBfirebase.Instance.saveSesh(withID: course!, loc: loc!,time: tim!,course: course!)
             
         }
         

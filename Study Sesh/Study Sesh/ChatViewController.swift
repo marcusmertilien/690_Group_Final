@@ -14,7 +14,7 @@ import Firebase
 class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, FetchData{
     @IBOutlet weak var myTable: UITableView!
     private var contacts = [Contact]();
-    private var CHAT_SUGUE = "ChatSegue";
+    private var Chat_Segue = "ChatSegue";
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: CHAT_SUGUE, sender: nil)
+        performSegue(withIdentifier: Chat_Segue, sender: nil)
     }
     
     
