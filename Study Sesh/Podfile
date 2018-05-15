@@ -14,7 +14,7 @@ pod 'Firebase/Messaging'
 pod 'Firebase/RemoteConfig'
 pod 'Firebase/Storage'
 pod 'JSQMessagesViewController'
-
+ pod 'SDWebImage'
 target 'Study Sesh' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   platform :ios, '11.2'
@@ -33,6 +33,7 @@ target 'Study Sesh' do
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Storage'
   pod 'JSQMessagesViewController'
+  pod 'SDWebImage'
   
   
   target 'Study SeshTests' do
@@ -48,6 +49,7 @@ target 'Study Sesh' do
       pod 'Firebase/RemoteConfig'
       pod 'Firebase/Storage'
       pod 'JSQMessagesViewController'
+       pod 'SDWebImage'
       
     inherit! :search_paths
     # Pods for testing
@@ -66,7 +68,7 @@ target 'Study Sesh' do
       pod 'Firebase/RemoteConfig'
       pod 'Firebase/Storage'
       pod 'JSQMessagesViewController'
-     
+      pod 'SDWebImage'
     inherit! :search_paths
     # Pods for testing
   end

@@ -12,9 +12,9 @@
 		0019A83420A94E08007DEE4F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019A83320A94E08007DEE4F /* Contact.swift */; };
 		0019A83620A97BCE007DEE4F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019A83520A97BCE007DEE4F /* MessageViewController.swift */; };
 		0019A83820AA9957007DEE4F /* FBAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019A83720AA9957007DEE4F /* FBAuth.swift */; };
-		006ACB4120A909A600222E5A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 006ACB4020A909A500222E5A /* logo.png */; };
 		006ACB4620A91D3D00222E5A /* FBdatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ACB4520A91D3D00222E5A /* FBdatabase.swift */; };
 		006ACB4820A93FAC00222E5A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ACB4720A93FAC00222E5A /* ChatViewController.swift */; };
+		00A5D4E720AAAA89004303BD /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D4E620AAAA89004303BD /* MessagesHandler.swift */; };
 		05B015999860B78F5212D25A /* Pods_Study_SeshUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DE6B687554DE96E1CF1559 /* Pods_Study_SeshUITests.framework */; };
 		50DCBF9B480776774EEC8162 /* Pods_Study_SeshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD20D0EA2F461344DCBDE801 /* Pods_Study_SeshTests.framework */; };
 		9CAF00F1887CF690CEE8D427 /* Pods_Study_Sesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139E0A94A1BF97003D028DCC /* Pods_Study_Sesh.framework */; };
@@ -57,9 +57,9 @@
 		0019A83320A94E08007DEE4F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		0019A83520A97BCE007DEE4F /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		0019A83720AA9957007DEE4F /* FBAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAuth.swift; sourceTree = "<group>"; };
-		006ACB4020A909A500222E5A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		006ACB4520A91D3D00222E5A /* FBdatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBdatabase.swift; sourceTree = "<group>"; };
 		006ACB4720A93FAC00222E5A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		00A5D4E620AAAA89004303BD /* MessagesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesHandler.swift; sourceTree = "<group>"; };
 		00DE6B687554DE96E1CF1559 /* Pods_Study_SeshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_SeshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		139E0A94A1BF97003D028DCC /* Pods_Study_Sesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Sesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		191C3383913F584EC00570CF /* Pods-Study SeshTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study SeshTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study SeshTests/Pods-Study SeshTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +87,6 @@
 		F86D290F20858F5700737388 /* Study_SeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshUITests.swift; sourceTree = "<group>"; };
 		F86D291120858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F887613F20A3B222004C8482 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-
 		F8A5649820A7EDD300C3FA0B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeshViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +125,7 @@
 				006ACB4520A91D3D00222E5A /* FBdatabase.swift */,
 				0019A83320A94E08007DEE4F /* Contact.swift */,
 				0019A83720AA9957007DEE4F /* FBAuth.swift */,
+				00A5D4E620AAAA89004303BD /* MessagesHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,7 +156,6 @@
 		F86522282086BB480006FEED /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
-
 				F8A5649820A7EDD300C3FA0B /* logo.png */,
 				F86522212086A7050006FEED /* Default.png */,
 				F86522202086A7050006FEED /* Default@2x.png */,
@@ -384,6 +383,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -392,6 +392,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -446,6 +447,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -454,6 +456,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -490,6 +493,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -498,6 +502,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -512,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0012828B20A146A50019AC74 /* SignupViewController.swift in Sources */,
+				00A5D4E720AAAA89004303BD /* MessagesHandler.swift in Sources */,
 				F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */,
 				0019A83420A94E08007DEE4F /* Contact.swift in Sources */,
 				F81ED5812087DD0F00069A8C /* SeshCell.swift in Sources */,

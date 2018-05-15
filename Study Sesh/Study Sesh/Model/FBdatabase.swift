@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
 
 protocol FetchData:class {
     func dataReceived(contacts: [Contact]);
@@ -20,6 +21,7 @@ class DBfirebase{
     weak var delegate:FetchData?
     
     private init(){}
+    
     
     static var Instance: DBfirebase{
         return _instance
@@ -35,15 +37,36 @@ class DBfirebase{
         return dbRef.child("seshs")
     }
     
+    var chatRef: FIRDatabaseReference{
+        
+        return seshsRef.child("course")
+    }
+    
+    var mediaMessagesRef: FIRDatabaseReference{
+        return dbRef.child("media_messages")
+    }
+    
+    var storageRef: FIRStorageReference{
+        return FIRStorage.storage().reference(forURL:"gs://study-sesh-csc690.appspot.com")
+    }
+    
+    var imageStorageRef:FIRStorageReference{
+        return storageRef.child("image")
+    }
+    
+    var videoStorageRef:FIRStorageReference{
+        return storageRef.child("video")
+    }
+    
     func saveUser(withID:String,email:String,password:String){
         let data: Dictionary<String,Any> = ["email":email,"password":password];
         userRef.child(withID).setValue(data);
     }
     
-    func saveSesh(withID:String,loc:String,time:String){
+    func saveSesh(withID:String,loc:String,time:String,course:String){
         
         
-        let data: Dictionary<String,Any> = ["location":loc,"time":time];
+        let data: Dictionary<String,Any> = ["location":loc,"time":time,"course":course];
         seshsRef.child(withID).setValue(data);
     }
     
@@ -58,10 +81,12 @@ class DBfirebase{
                     if let contactData = value as? NSDictionary{
                         if let email = contactData["location"] as? String{
                             if let time = contactData["time"] as? String{
-                            let id = key as! String;
+                                if let course = contactData["course"] as? String{
+                                    let id = key as! String;
                             
-                            let newContact = Contact(id: id, name:email,time:time);
+                                    let newContact = Contact(id: id, name:email,time:time,course:course);
                             con.append(newContact)
+                                }
                         }
                     }
                 }

@@ -13,8 +13,11 @@ import AVKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import SDWebImage
 
-class MessageViewController: JSQMessagesViewController ,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class MessageViewController: JSQMessagesViewController, MessageRecievedDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+   
+    
     private var messages = [JSQMessage]();
     let choice = UIImagePickerController();
     
@@ -22,22 +25,29 @@ class MessageViewController: JSQMessagesViewController ,UIImagePickerControllerD
         super.viewDidLoad()
         
         choice.delegate = self
-        
-        let userID = FIRAuth.auth()?.currentUser!.uid
+        MessagesHandler.Instance.delegate = self
+       
         let email = FIRAuth.auth()?.currentUser!.email
-        self.senderId = userID
+        self.senderId = FBAuth.Instance.userID()
         self.senderDisplayName = email
         // Do any additional setup after loading the view.
+        
+        MessagesHandler.Instance.observeMessages()
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt
         indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         let bubbleFactory = JSQMessagesBubbleImageFactory()
         //let message = messages[indexPath.item]
-        return bubbleFactory?.outgoingMessagesBubbleImage(with: UIColor.blue)
+        let message = messages[indexPath.item]
+        if message.senderId == self.senderId{
+            return bubbleFactory?.outgoingMessagesBubbleImage(with: UIColor.blue)
+        }else{
+            return bubbleFactory?.incomingMessagesBubbleImage(with: UIColor.green)
+        }
     }
     
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! { 
         return JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named:"profile"), diameter: 30)
     }
     
@@ -73,8 +83,9 @@ class MessageViewController: JSQMessagesViewController ,UIImagePickerControllerD
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         
-        messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text))
-        collectionView.reloadData()
+//        messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text))
+//        collectionView.reloadData()
+        MessagesHandler.Instance.sendMessage(senderID: senderId, senderName: senderDisplayName, text: text)
         
         finishSendingMessage()
     }
@@ -99,18 +110,58 @@ class MessageViewController: JSQMessagesViewController ,UIImagePickerControllerD
         present(choice,animated:true,completion:nil);
     }
     
+    //pick media
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pic = info[UIImagePickerControllerOriginalImage] as?
             UIImage{
-            let picJSQ = JSQPhotoMediaItem(image:pic);
-            self.messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, media: picJSQ))
-        
+            let data = UIImageJPEGRepresentation(pic, 0.01)
+            MessagesHandler.Instance.sendMedia(image: data, video: nil, senderID: senderId, senderName: senderDisplayName)
         }else if let vid = info[UIImagePickerControllerMediaURL] as? URL{
-            let vidJSQ = JSQVideoMediaItem(fileURL: vid, isReadyToPlay:true)
-            messages.append(JSQMessage(senderId:senderId, displayName:senderDisplayName,media:vidJSQ))
+            MessagesHandler.Instance.sendMedia(image: nil, video: vid, senderID: senderId, senderName: senderDisplayName)
         }
         self.dismiss(animated:true,completion: nil)
         collectionView.reloadData()
+    }
+    
+    //read messages
+    func messageRecieved(senderID: String,senderName: String, text: String) {
+        messages.append(JSQMessage(senderId: senderID, displayName: senderDisplayName, text:text))
+        collectionView.reloadData()
+    }
+    
+    func mediaRecieved(senderID: String,senderName: String, url: String) {
+        if let mediaURL = URL(string:url){
+            do{
+                let data = try Data(contentsOf:mediaURL)
+                    if let _ = UIImage(data:data){
+                    let _ = SDWebImageDownloader.shared().downloadImage(with:mediaURL,options:[],progress:nil,completed:{
+                        (image,data,error,finished) in
+                        
+                        DispatchQueue.main.async{
+                            let photo = JSQPhotoMediaItem(image:image)
+                            if senderID == self.senderId{
+                                photo?.appliesMediaViewMaskAsOutgoing = true
+                            }else{
+                                photo?.appliesMediaViewMaskAsOutgoing = false
+                            }
+                            self.messages.append(JSQMessage(senderId:senderID,displayName:senderName,media:photo))
+                                self.collectionView.reloadData()
+                        }
+                    })
+                    }else{
+                        let video = JSQVideoMediaItem(fileURL:mediaURL,isReadyToPlay:true)
+                        if senderID == self.senderId{
+                            video?.appliesMediaViewMaskAsOutgoing=true
+                        }else{
+                            video?.appliesMediaViewMaskAsOutgoing=false
+                        }
+                        messages.append(JSQMessage(senderId:senderID,displayName:senderName,media:video))
+                        self.collectionView.reloadData()
+                }
+            }catch{
+                //catch error
+            }
+        }
     }
     
     @IBAction func btnBack(_ sender: Any) {

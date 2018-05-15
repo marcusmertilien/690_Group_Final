@@ -18,9 +18,10 @@ class AppointmentViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let saveSeshs = loadSeshs(){
-            seshs = saveSeshs
-        }
+        
+//        if let saveSeshs = loadSeshs(){
+//            seshs = saveSeshs
+//        }
     }
 
 
@@ -116,60 +117,53 @@ class AppointmentViewController: UITableViewController {
     
     
 //Temporary Test Data
-    private func loadSampleTasks(){
-        let sesh1 = studySesh(location: "Lib", time: "3pm")
-        let sesh2 = studySesh(location: "Student Union", time: "12pm")
-        let sesh3 = studySesh(location: "CS Lab", time: "8am")
-        
-        
-        seshs.append(sesh1!)
-        seshs.append(sesh2!)
-        seshs.append(sesh3!)
-        
-    }
+//    private func loadSampleTasks(){
+//        let sesh1 = studySesh(location: "Lib", time: "3pm")
+//        let sesh2 = studySesh(location: "Student Union", time: "12pm")
+//        let sesh3 = studySesh(location: "CS Lab", time: "8am")
+//
+//
+//        seshs.append(sesh1!)
+//        seshs.append(sesh2!)
+//        seshs.append(sesh3!)
+//
+//    }
     
-   func randomString(length: Int) -> String {
-        
-        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        let len = UInt32(letters.length)
-        
-        var randomString = ""
-        
-        for _ in 0 ..< length {
-            let rand = arc4random_uniform(len)
-            var nextChar = letters.character(at: Int(rand))
-            randomString += NSString(characters: &nextChar, length: 1) as String
-        }
-    
-        return randomString
-    }
+//   func randomString(length: Int) -> String {
+//
+//        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+//        let len = UInt32(letters.length)
+//
+//        var randomString = ""
+//
+//        for _ in 0 ..< length {
+//            let rand = arc4random_uniform(len)
+//            var nextChar = letters.character(at: Int(rand))
+//            randomString += NSString(characters: &nextChar, length: 1) as String
+//        }
+//
+//        return randomString
+//    }
     
 //Saving Data Locally
     private func saveSeshs(){
-
-      //  let arrSize = seshs.count
-        
-        
-        let userID = FIRAuth.auth()?.currentUser!.uid
-        //let seshID = Fir
-
         
         for(_,element) in seshs.enumerated(){
             let loc = element.location
             let tim = element.time
-
+            let course = element.course
             
-            DBfirebase.Instance.saveSesh(withID: randomString(length: 15), loc: loc!,time: tim!)
+            DBfirebase.Instance.saveSesh(withID: course!, loc: loc!,time: tim!,course: course!)
             
         }
-
+        
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
             os_log("Seshs saved.", log: OSLog.default,type: .debug)
         }else{
             os_log("Failed to save sehs...", log: OSLog.default, type: .error)
         }
-         
+        
  
  
  
