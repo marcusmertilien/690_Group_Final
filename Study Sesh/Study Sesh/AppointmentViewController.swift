@@ -177,13 +177,7 @@ class AppointmentViewController: UITableViewController {
             DBfirebase.Instance.saveSesh(withID: randomString(length: 15), loc: loc!,time: tim!)
             
         }
-<<<<<<< HEAD
-        
-        
-=======
 
-
->>>>>>> 28bd920a6aaa0bfdf2c27db884de500aaf4d71d5
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
             os_log("Seshs saved.", log: OSLog.default,type: .debug)
