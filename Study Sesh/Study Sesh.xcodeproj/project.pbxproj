@@ -29,6 +29,10 @@
 		F86D290520858F5700737388 /* Study_SeshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290420858F5700737388 /* Study_SeshTests.swift */; };
 		F86D291020858F5700737388 /* Study_SeshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86D290F20858F5700737388 /* Study_SeshUITests.swift */; };
 		F887614020A3B222004C8482 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F887613F20A3B222004C8482 /* GoogleService-Info.plist */; };
+<<<<<<< HEAD
+=======
+		F8A5649920A7EDD400C3FA0B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A5649820A7EDD300C3FA0B /* logo.png */; };
+>>>>>>> feat_Cosmetics
 		F8ED725B2086EF6D0050B715 /* AddSeshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +88,10 @@
 		F86D290F20858F5700737388 /* Study_SeshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SeshUITests.swift; sourceTree = "<group>"; };
 		F86D291120858F5700737388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F887613F20A3B222004C8482 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		F8A5649820A7EDD300C3FA0B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+>>>>>>> feat_Cosmetics
 		F8ED725A2086EF6D0050B715 /* AddSeshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeshViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,7 +158,11 @@
 		F86522282086BB480006FEED /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				006ACB4020A909A500222E5A /* logo.png */,
+=======
+				F8A5649820A7EDD300C3FA0B /* logo.png */,
+>>>>>>> feat_Cosmetics
 				F86522212086A7050006FEED /* Default.png */,
 				F86522202086A7050006FEED /* Default@2x.png */,
 			);
@@ -342,7 +354,11 @@
 				F887614020A3B222004C8482 /* GoogleService-Info.plist in Resources */,
 				F86D28F720858F5700737388 /* Assets.xcassets in Resources */,
 				F86522272086AC430006FEED /* Launch Screen.storyboard in Resources */,
+<<<<<<< HEAD
 				006ACB4120A909A600222E5A /* logo.png in Resources */,
+=======
+				F8A5649920A7EDD400C3FA0B /* logo.png in Resources */,
+>>>>>>> feat_Cosmetics
 				F86D28F520858F5700737388 /* Main.storyboard in Resources */,
 				F86522232086A7050006FEED /* Default.png in Resources */,
 			);

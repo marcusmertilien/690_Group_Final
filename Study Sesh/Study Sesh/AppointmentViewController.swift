@@ -12,6 +12,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
+
 class AppointmentViewController: UITableViewController {
     
     var seshs = [studySesh]()
@@ -22,19 +23,21 @@ class AppointmentViewController: UITableViewController {
             seshs = saveSeshs
         }
         // Do any additional setup after loading the view, typically from a nib.
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.tintAdjustmentMode = .normal
-        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
-        self.navigationController?.setToolbarHidden(false, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated);
-        self.navigationController?.setToolbarHidden(true, animated: animated)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//       // super.viewWillAppear(animated)
+//       // self.navigationController?.navigationBar.tintAdjustmentMode = .normal
+//       // self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
+//
+//       // self.navigationController?.setToolbarHidden(false, animated: animated)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        //super.viewWillDisappear(animated);
+//        //self.navigationController?.setToolbarHidden(true, animated: animated)
+//    }
 
 
 //Table Cells
@@ -72,9 +75,19 @@ class AppointmentViewController: UITableViewController {
         case "AddSesh":
             os_log("Adding a new sesh", log: OSLog.default, type: .debug)
             
-        /*
         case "EditSesh":
-            We may add the ability to edit sessions later. Holding off currently because what if sessions are synced across multiple devices throughout the database. May be a tricky implementation.*/
+           /* We may add the ability to edit sessions later. Holding off currently because what if sessions are synced across multiple devices throughout the database. May be a tricky implementation.*/
+            
+            os_log("Edit a new task", log: OSLog.default, type: .debug)
+            let editController =  segue.destination as! AddSeshViewController
+            
+            let selectedSeshCell = sender as? SeshCell
+            
+            let indexPath = tableView.indexPath(for: selectedSeshCell!)
+            
+            let selectedSesh = seshs[(indexPath?.row)!]
+            editController.sesh = selectedSesh
+            
         default:
             break
         }
@@ -107,6 +120,7 @@ class AppointmentViewController: UITableViewController {
                 //Update an existing task
                 seshs[selectedIndexPath.row] = sesh
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
+                
             }else{
                 // Add a new sesh.
                 let newIndexPath = IndexPath(row: seshs.count, section: 0)
@@ -135,6 +149,7 @@ class AppointmentViewController: UITableViewController {
     
 //Saving Data Locally
     private func saveSeshs(){
+
       //  let arrSize = seshs.count
         
         
@@ -144,10 +159,8 @@ class AppointmentViewController: UITableViewController {
             let tim = element.time
             DBfirebase.Instance.saveSesh(withID: userID!, loc: loc!,time: tim!)
         }
-        
-       
-        
-        
+
+
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
             os_log("Seshs saved.", log: OSLog.default,type: .debug)

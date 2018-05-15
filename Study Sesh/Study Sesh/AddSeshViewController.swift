@@ -16,7 +16,10 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
    
     
+<<<<<<< HEAD
     //@IBOutlet weak var save: UIBarButtonItem!
+=======
+>>>>>>> feat_Cosmetics
     @IBOutlet weak var save: UIButton!
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
@@ -25,6 +28,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
     var sesh: studySesh?
     
     let datePicker = UIDatePicker()
+    let memberPicker = UIPickerView()
     
     
     override func viewDidLoad() {
@@ -44,10 +48,19 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.toolbar.isHidden = false
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        //navigationController?.toolbar.isHidden = false
+//    }
    
+    func createMemberPicker(){
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //Done button
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([done], animated: false)
+        
+    }
     
    
     
@@ -122,8 +135,6 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }else if (sender == Members){
             print (" \nMembers text Field Did End Editing")
         }
-        
-        navigationItem.title = sender.text
     }
     
     
@@ -152,16 +163,18 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
     
 //Prepare for return from segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
+        //super.prepare(for: segue, sender: sender)
         
         // Configure the destination view controller only when the save button is pressed.
-        guard let button = sender as? UIButton, button === save else {
+        guard let button = sender as? UIBarButtonItem, button === save else {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+          
             return
         }
         
-        guard (sender as? UIButton) != nil else {
+        guard (sender as? UIBarButtonItem) != nil else {
             os_log("Something unforseable has gone wrong", log: OSLog.default, type: .debug)
+            
             return
         }
         
