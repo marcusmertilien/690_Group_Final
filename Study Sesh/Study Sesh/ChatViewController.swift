@@ -24,6 +24,12 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func dataReceived(contacts:[Contact]) {
         self.contacts = contacts;
         
+        for contact in contacts{
+            if contact.id == FBAuth.Instance.userID(){
+                
+            }
+        }
+        
         myTable.reloadData();
     }
     

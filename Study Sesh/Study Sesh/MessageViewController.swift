@@ -14,11 +14,15 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class MessageViewController: JSQMessagesViewController {
+class MessageViewController: JSQMessagesViewController ,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     private var messages = [JSQMessage]();
+    let choice = UIImagePickerController();
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        choice.delegate = self
+        
         let userID = FIRAuth.auth()?.currentUser!.uid
         let email = FIRAuth.auth()?.currentUser!.email
         self.senderId = userID
@@ -39,6 +43,18 @@ class MessageViewController: JSQMessagesViewController {
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.item]
+    }
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, didTapMessageBubbleAt indexPath: IndexPath!) {
+        let msg = messages[indexPath.item]
+        if msg.isMediaMessage{
+            if let mediaItem = msg.media as? JSQVideoMediaItem{
+                let player = AVPlayer(url:mediaItem.fileURL)
+                let playerController = AVPlayerViewController()
+                playerController.player = player
+                self.present(playerController, animated: true,completion: nil)
+            }
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,6 +79,39 @@ class MessageViewController: JSQMessagesViewController {
         finishSendingMessage()
     }
     
+    override func didPressAccessoryButton(_ sender: UIButton!) {
+        let alert = UIAlertController(title:"Media Messages",message:"Please choose a Media",preferredStyle: .actionSheet);
+        let cancel = UIAlertAction(title:"Cancel",style:.cancel,handler:nil)
+        let photos = UIAlertAction(title:"Photos",style: .default,handler:{(alert:UIAlertAction) in
+            self.mediaChoice(type: kUTTypeImage)
+        })
+        let videos = UIAlertAction(title:"Videos",style: .default,handler:{(alert:UIAlertAction) in
+            self.mediaChoice(type: kUTTypeMovie)
+        })
+        alert.addAction(photos)
+        alert.addAction(cancel)
+        alert.addAction(videos)
+        present(alert,animated:true,completion:nil)
+    }
+    
+    private func mediaChoice(type:CFString){
+        choice.mediaTypes = [type as String]
+        present(choice,animated:true,completion:nil);
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pic = info[UIImagePickerControllerOriginalImage] as?
+            UIImage{
+            let picJSQ = JSQPhotoMediaItem(image:pic);
+            self.messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, media: picJSQ))
+        
+        }else if let vid = info[UIImagePickerControllerMediaURL] as? URL{
+            let vidJSQ = JSQVideoMediaItem(fileURL: vid, isReadyToPlay:true)
+            messages.append(JSQMessage(senderId:senderId, displayName:senderDisplayName,media:vidJSQ))
+        }
+        self.dismiss(animated:true,completion: nil)
+        collectionView.reloadData()
+    }
     
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
