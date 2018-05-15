@@ -10,15 +10,13 @@ import UIKit
 import os.log
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
+
 
 class AppointmentViewController: UITableViewController {
     
     var seshs = [studySesh]()
    
-    //var ref =  DatabaseReference!
-        
-    //ref = Database.database().reference()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let saveSeshs = loadSeshs(){
@@ -148,19 +146,54 @@ class AppointmentViewController: UITableViewController {
         
     }
     
+   func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+    
+        return randomString
+    }
     
 //Saving Data Locally
     private func saveSeshs(){
 
+      //  let arrSize = seshs.count
+        
+        
+       // let userID = FIRAuth.auth()?.currentUser!.uid
+        
+        for(_,element) in seshs.enumerated(){
+            let loc = element.location
+            let tim = element.time
+            
+            DBfirebase.Instance.saveSesh(withID: randomString(length: 15), loc: loc!,time: tim!)
+            
+        }
+<<<<<<< HEAD
+        
+        
+=======
 
-    //FIRDatabase.database().reference().child("seshs").child((user?.uid)!).setValue(seshs)
-        //
+
+>>>>>>> 28bd920a6aaa0bfdf2c27db884de500aaf4d71d5
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
             os_log("Seshs saved.", log: OSLog.default,type: .debug)
         }else{
             os_log("Failed to save sehs...", log: OSLog.default, type: .error)
         }
+         
+ 
+ 
+ 
     }
 
 //Loading Local Data

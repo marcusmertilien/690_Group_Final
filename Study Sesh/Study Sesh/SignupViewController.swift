@@ -64,28 +64,9 @@ class SignupViewController: UIViewController {
             FIRAuth.auth()!.createUser(withEmail: users!, password: pass!) { (user, error) in
                 if error == nil {
                     print("You have successfully signed up")
-                    //let userId = (FIRAuth.auth()?.currentUser?.uid)!
-                    //let var ref: FIRDatabaseReference?
-                    //ref.child("users").child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
-                      //  print(snapshot.childSnapshot(forPath: "name").value as! String)
-                        //print(snapshot.childSnapshot(forPath: "any place you would like to query from").value as! String)
-                    //})
-                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
-                   /*
-                    let userDB = FIRDatabase.database().reference().child("User")
-                    let userDictionary : NSDictionary = ["Sender" : FIRAuth?.auth().currentUser!.email as String!, "UserBody" : txtUser.text!]
-                    userDB.childByAutoId().setValue(userDictionary) {
-                        (error, ref) in
-                        if error != nil {
-                            print(error!)
-                        }
-                        else {
-                            print("User saved successfully!")
-                        }
-                    }
-                    */
-
-                    FIRDatabase.database().reference().child("users").child((user?.uid)!).setValue(users)
+                
+                    //FIRDatabase.database().reference().child("users").child((user?.uid)!).setValue(users)
+                    DBfirebase.Instance.saveUser(withID: user!.uid, email: users!,password: pass!)
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "Nav")
                     self.present(vc, animated: true, completion: nil)

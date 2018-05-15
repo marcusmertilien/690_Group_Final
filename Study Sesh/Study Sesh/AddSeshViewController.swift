@@ -8,11 +8,18 @@
 
 import UIKit
 import os.log
+import Foundation
+import Firebase
+import FirebaseDatabase
 
 class AddSeshViewController:UIViewController, UITextFieldDelegate{
    
    
     
+<<<<<<< HEAD
+    //@IBOutlet weak var save: UIBarButtonItem!
+=======
+>>>>>>> feat_Cosmetics
     @IBOutlet weak var save: UIButton!
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
@@ -174,6 +181,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         let location = Location.text ?? ""
         let time = Time.text ?? ""
         //let members = Members.text ?? ""
+        
         sesh = studySesh(location: location, time: time)
     }
     
