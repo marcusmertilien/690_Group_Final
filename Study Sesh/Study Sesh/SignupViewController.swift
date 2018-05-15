@@ -32,7 +32,6 @@ class SignupViewController: UIViewController {
             print(auth)
             if let user = user {
                 print(user)
-                
             }
         }
     }

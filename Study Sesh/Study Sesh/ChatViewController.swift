@@ -29,7 +29,6 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 FBAuth.Instance.userName = contact.name
             }
         }
-        
         myTable.reloadData();
     }
     
@@ -41,8 +40,6 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return contacts.count;
     }
     
-    
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -53,11 +50,5 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Chat_Segue, sender: nil)
     }
-    
-    
 }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: CHAT_SUGUE, sender: nil)
-//    }
 

@@ -82,9 +82,7 @@ class MessageViewController: JSQMessagesViewController, MessageRecievedDelegate,
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        
-//        messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text))
-//        collectionView.reloadData()
+
         MessagesHandler.Instance.sendMessage(senderID: senderId, senderName: senderDisplayName, text: text)
         
         finishSendingMessage()
@@ -167,7 +165,4 @@ class MessageViewController: JSQMessagesViewController, MessageRecievedDelegate,
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-   
-    
-
 }

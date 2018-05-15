@@ -44,9 +44,6 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }
         
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        //navigationController?.toolbar.isHidden = false
-//    }
    
     func createMemberPicker(){
         let toolbar = UIToolbar()
@@ -57,8 +54,6 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         toolbar.setItems([done], animated: false)
         
     }
-    
-   
     
     func createDatePicker(){
         //Toolbar
@@ -118,7 +113,6 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         print ("Save Disabled")
     }
     
-    
      func textFieldDidEndEditing(_ sender: UITextField) {
         //Update Save Button
         updateSaveButton()
@@ -133,14 +127,11 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         }
     }
     
-    
-    
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
     }
-    
     
     private func updateSaveButton(){
         //Disarm the save button if the text field is empty
@@ -180,5 +171,4 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         
         sesh = studySesh(location: location, time: time,course:courses)
     }
-    
 }

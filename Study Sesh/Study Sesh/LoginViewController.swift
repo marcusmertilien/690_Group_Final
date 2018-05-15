@@ -13,18 +13,14 @@ import FirebaseDatabase
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var lblCaution: UILabel!
-    //@IBOutlet weak var txtUser: UITextField!
-    //@IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUser: UITextField!
     @IBOutlet weak var txtPass: UITextField!
-    //var myRootRef: FIRDatabaseReference
+    
     var handle: FIRAuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
     
     
@@ -33,7 +29,6 @@ class LoginViewController: UIViewController {
             print(auth)
             if let user = user {
                 print(user)
-                
             }
             if FIRAuth.auth()?.currentUser != nil{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -49,7 +44,6 @@ class LoginViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -75,7 +69,6 @@ class LoginViewController: UIViewController {
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
-                    //FIRDatabase.database().reference().child("users").child((user?.uid)!).setValue(self.txtUser.text)
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "Nav")
                     self.present(vc, animated: true, completion: nil)

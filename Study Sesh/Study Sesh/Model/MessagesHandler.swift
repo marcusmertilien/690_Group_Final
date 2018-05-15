@@ -14,8 +14,8 @@ import FirebaseStorage
 protocol MessageRecievedDelegate:class {
     func messageRecieved(senderID: String, senderName:String, text:String)
     func mediaRecieved(senderID: String, senderName:String, url:String)
-
 }
+
 class MessagesHandler{
     private static let _instance = MessagesHandler()
     private init(){}
@@ -87,16 +87,10 @@ class MessagesHandler{
                         if let fileURL = data["url"] as?
                             String{
                             self.delegate?.mediaRecieved(senderID:id, senderName:name, url:fileURL)
-                            
-                       
                         }
-                        
                     }
                 }
             }
-            
         }
     }
-    
-    
 }

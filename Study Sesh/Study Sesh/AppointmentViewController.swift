@@ -18,10 +18,8 @@ class AppointmentViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        if let saveSeshs = loadSeshs(){
-//            seshs = saveSeshs
-//        }
+        //Optionally Load Test Values
+        //loadSeshs()
     }
 
 
@@ -117,33 +115,16 @@ class AppointmentViewController: UITableViewController {
     
     
 //Temporary Test Data
-//    private func loadSampleTasks(){
-//        let sesh1 = studySesh(location: "Lib", time: "3pm")
-//        let sesh2 = studySesh(location: "Student Union", time: "12pm")
-//        let sesh3 = studySesh(location: "CS Lab", time: "8am")
-//
-//
-//        seshs.append(sesh1!)
-//        seshs.append(sesh2!)
-//        seshs.append(sesh3!)
-//
-//    }
-    
-//   func randomString(length: Int) -> String {
-//
-//        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-//        let len = UInt32(letters.length)
-//
-//        var randomString = ""
-//
-//        for _ in 0 ..< length {
-//            let rand = arc4random_uniform(len)
-//            var nextChar = letters.character(at: Int(rand))
-//            randomString += NSString(characters: &nextChar, length: 1) as String
-//        }
-//
-//        return randomString
-//    }
+    private func loadSampleTasks(){
+        let sesh1 = studySesh(location: "Lib", time: "3pm", course: "CSC690")
+        let sesh2 = studySesh(location: "Student Union", time: "12pm", course: "CSC656")
+        let sesh3 = studySesh(location: "CS Lab", time: "8am", course: "CSC600")
+
+        seshs.append(sesh1!)
+        seshs.append(sesh2!)
+        seshs.append(sesh3!)
+
+    }
     
 //Saving Data Locally
     private func saveSeshs(){
@@ -154,7 +135,6 @@ class AppointmentViewController: UITableViewController {
             let course = element.course
             
             DBfirebase.Instance.saveSesh(withID: course!, loc: loc!,time: tim!,course: course!)
-            
         }
         
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
@@ -163,10 +143,6 @@ class AppointmentViewController: UITableViewController {
         }else{
             os_log("Failed to save sehs...", log: OSLog.default, type: .error)
         }
-        
- 
- 
- 
     }
 
 //Loading Local Data
@@ -174,7 +150,6 @@ class AppointmentViewController: UITableViewController {
         return NSKeyedUnarchiver.unarchiveObject(withFile: studySesh.ArchiveURL.path) as?
             [studySesh]
     }
-    
 }
 
 

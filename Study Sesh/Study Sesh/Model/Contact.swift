@@ -15,8 +15,8 @@ class Contact{
         _name = name;
         _time = time;
         _course = course;
-      
     }
+    
     private var _name = "";
     private var _id = "";
     private var _time = "";
@@ -25,6 +25,7 @@ class Contact{
     var name:String{
         return _name;
     }
+    
     var id:String{
         return _id;
     }
@@ -32,6 +33,7 @@ class Contact{
     var time:String{
         return _time;
     }
+    
     var course:String{
         return _course;
     }

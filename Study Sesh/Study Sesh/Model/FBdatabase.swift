@@ -22,7 +22,6 @@ class DBfirebase{
     
     private init(){}
     
-    
     static var Instance: DBfirebase{
         return _instance
     }
@@ -71,10 +70,8 @@ class DBfirebase{
     }
     
     func getContacts(){
-        //let userID = FIRAuth.auth()?.currentUser!.uid
         var con = [Contact]();
         seshsRef.observeSingleEvent(of: FIRDataEventType.value){
-            //userRef.observeSingleEvent(of: FIRDataEventType.value){
             (snapshot:FIRDataSnapshot) in
             if let myContacts = snapshot.value as? NSDictionary{
                 for (key,value) in myContacts{
@@ -87,14 +84,12 @@ class DBfirebase{
                                     let newContact = Contact(id: id, name:email,time:time,course:course);
                             con.append(newContact)
                                 }
+                            }
                         }
                     }
                 }
-            }
             self.delegate?.dataReceived(contacts: con)
         }
-        
     }
-   
 }
 }
