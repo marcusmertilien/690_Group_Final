@@ -41,6 +41,8 @@ class DBfirebase{
     }
     
     func saveSesh(withID:String,loc:String,time:String){
+        
+        
         let data: Dictionary<String,Any> = ["location":loc,"time":time];
         seshsRef.child(withID).setValue(data);
     }
