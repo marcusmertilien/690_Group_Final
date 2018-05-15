@@ -146,6 +146,21 @@ class AppointmentViewController: UITableViewController {
         
     }
     
+   func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+    
+        return randomString
+    }
     
 //Saving Data Locally
     private func saveSeshs(){
@@ -154,15 +169,17 @@ class AppointmentViewController: UITableViewController {
         
         
         let userID = FIRAuth.auth()?.currentUser!.uid
-        let seshID = Fir
+        //let seshID = Fir
+
         
         for(_,element) in seshs.enumerated(){
             let loc = element.location
             let tim = element.time
-            DBfirebase.Instance.saveSesh(withID: userID!, loc: loc!,time: tim!)
+
+            
+            DBfirebase.Instance.saveSesh(withID: randomString(length: 15), loc: loc!,time: tim!)
             
         }
-
 
         let goodSave = NSKeyedArchiver.archiveRootObject(seshs, toFile: studySesh.ArchiveURL.path)
         if goodSave{
@@ -170,6 +187,8 @@ class AppointmentViewController: UITableViewController {
         }else{
             os_log("Failed to save sehs...", log: OSLog.default, type: .error)
         }
+         
+ 
  
  
     }

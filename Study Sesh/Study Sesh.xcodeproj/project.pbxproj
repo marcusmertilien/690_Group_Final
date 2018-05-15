@@ -11,6 +11,7 @@
 		0012828B20A146A50019AC74 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012828A20A146A50019AC74 /* SignupViewController.swift */; };
 		0019A83420A94E08007DEE4F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019A83320A94E08007DEE4F /* Contact.swift */; };
 		0019A83620A97BCE007DEE4F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019A83520A97BCE007DEE4F /* MessageViewController.swift */; };
+		0019A83820AA9957007DEE4F /* FBAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019A83720AA9957007DEE4F /* FBAuth.swift */; };
 		006ACB4120A909A600222E5A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 006ACB4020A909A500222E5A /* logo.png */; };
 		006ACB4620A91D3D00222E5A /* FBdatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ACB4520A91D3D00222E5A /* FBdatabase.swift */; };
 		006ACB4820A93FAC00222E5A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ACB4720A93FAC00222E5A /* ChatViewController.swift */; };
@@ -55,6 +56,7 @@
 		0012828A20A146A50019AC74 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0019A83320A94E08007DEE4F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		0019A83520A97BCE007DEE4F /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		0019A83720AA9957007DEE4F /* FBAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAuth.swift; sourceTree = "<group>"; };
 		006ACB4020A909A500222E5A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		006ACB4520A91D3D00222E5A /* FBdatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBdatabase.swift; sourceTree = "<group>"; };
 		006ACB4720A93FAC00222E5A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				006ACB4520A91D3D00222E5A /* FBdatabase.swift */,
 				0019A83320A94E08007DEE4F /* Contact.swift */,
+				0019A83720AA9957007DEE4F /* FBAuth.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				F81ED5832087E6EB00069A8C /* studySesh.swift in Sources */,
 				0019A83620A97BCE007DEE4F /* MessageViewController.swift in Sources */,
 				F86D28F020858F5700737388 /* AppDelegate.swift in Sources */,
+				0019A83820AA9957007DEE4F /* FBAuth.swift in Sources */,
 				006ACB4820A93FAC00222E5A /* ChatViewController.swift in Sources */,
 				006ACB4620A91D3D00222E5A /* FBdatabase.swift in Sources */,
 			);
