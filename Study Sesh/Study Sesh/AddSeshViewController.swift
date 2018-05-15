@@ -21,6 +21,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
     var sesh: studySesh?
     
     let datePicker = UIDatePicker()
+    let memberPicker = UIPickerView()
     
     
     override func viewDidLoad() {
@@ -44,6 +45,15 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
 //        //navigationController?.toolbar.isHidden = false
 //    }
    
+    func createMemberPicker(){
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //Done button
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([done], animated: false)
+        
+    }
     
    
     
