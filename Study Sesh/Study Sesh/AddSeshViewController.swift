@@ -19,7 +19,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
     @IBOutlet weak var save: UIButton!
     @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var Time: UITextField!
-    @IBOutlet weak var Members: UITextField!
+    @IBOutlet weak var Course: UITextField!
     
     var sesh: studySesh?
     
@@ -36,7 +36,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         //Establish Delegates
         Location.delegate = self as UITextFieldDelegate
         Time.delegate = self as UITextFieldDelegate
-        Members.delegate = self as UITextFieldDelegate
+        Course.delegate = self as UITextFieldDelegate
         
         if let localSesh = sesh{
             Location.text = localSesh.location
@@ -109,7 +109,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
             print (" Location text Field Did Begin Editing")
         }else if (sender == Time){
             print (" Timed text Field Did Begin Editing")
-        }else if (sender == Members){
+        }else if (sender == Course){
             print ("Members text Field Did Begin Editing")
         }
         
@@ -128,7 +128,7 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
             print (" \nLocation text Field Did End Editing")
         }else if (sender == Time){
             print (" \nTimed text Field Did End Editing")
-        }else if (sender == Members){
+        }else if (sender == Course){
             print (" \nMembers text Field Did End Editing")
         }
     }
@@ -146,15 +146,15 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         //Disarm the save button if the text field is empty
         let location = Location.text ?? ""
         let time = Time.text ?? ""
-        let members = Members.text ?? ""
+        let courses = Course.text ?? ""
         
         print("\n\nUpdate Save Button Called")
         print ("\nLocation: " ,!location.isEmpty)
         print ("\nTime: " , !time.isEmpty)
-        print ("\nMembers: ", !members.isEmpty)
+        print ("\nMembers: ", !courses.isEmpty)
         
         save.isEnabled = (!location.isEmpty && !time.isEmpty &&
-            !members.isEmpty)
+            !courses.isEmpty)
     }
     
 //Prepare for return from segue
@@ -176,9 +176,9 @@ class AddSeshViewController:UIViewController, UITextFieldDelegate{
         
         let location = Location.text ?? ""
         let time = Time.text ?? ""
-        //let members = Members.text ?? ""
+        let courses = Course.text ?? ""
         
-        sesh = studySesh(location: location, time: time)
+        sesh = studySesh(location: location, time: time,course:courses)
     }
     
 }

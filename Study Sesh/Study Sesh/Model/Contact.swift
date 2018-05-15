@@ -10,16 +10,17 @@ import Foundation
 
 class Contact{
     
-    init(id:String,name:String,time:String){
+    init(id:String,name:String,time:String, course:String){
         _id = id;
         _name = name;
         _time = time;
+        _course = course;
       
     }
     private var _name = "";
     private var _id = "";
     private var _time = "";
-
+    private var _course = ""
     
     var name:String{
         return _name;
@@ -30,5 +31,8 @@ class Contact{
     
     var time:String{
         return _time;
+    }
+    var course:String{
+        return _course;
     }
 }

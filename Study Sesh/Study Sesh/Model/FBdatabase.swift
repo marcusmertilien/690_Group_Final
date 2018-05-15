@@ -22,6 +22,7 @@ class DBfirebase{
     
     private init(){}
     
+    
     static var Instance: DBfirebase{
         return _instance
     }
@@ -37,7 +38,8 @@ class DBfirebase{
     }
     
     var chatRef: FIRDatabaseReference{
-        return seshsRef.child("chat")
+        
+        return seshsRef.child("course")
     }
     
     var mediaMessagesRef: FIRDatabaseReference{
@@ -61,10 +63,10 @@ class DBfirebase{
         userRef.child(withID).setValue(data);
     }
     
-    func saveSesh(withID:String,loc:String,time:String){
+    func saveSesh(withID:String,loc:String,time:String,course:String){
         
         
-        let data: Dictionary<String,Any> = ["location":loc,"time":time];
+        let data: Dictionary<String,Any> = ["location":loc,"time":time,"course":course];
         seshsRef.child(withID).setValue(data);
     }
     
@@ -79,10 +81,12 @@ class DBfirebase{
                     if let contactData = value as? NSDictionary{
                         if let email = contactData["location"] as? String{
                             if let time = contactData["time"] as? String{
-                            let id = key as! String;
+                                if let course = contactData["course"] as? String{
+                                    let id = key as! String;
                             
-                            let newContact = Contact(id: id, name:email,time:time);
+                                    let newContact = Contact(id: id, name:email,time:time,course:course);
                             con.append(newContact)
+                                }
                         }
                     }
                 }

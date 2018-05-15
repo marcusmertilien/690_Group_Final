@@ -46,7 +46,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = contacts[indexPath.row].name + " @ " + contacts[indexPath.row].time
+        cell.textLabel?.text = contacts[indexPath.row].name + " @ " + contacts[indexPath.row].time + " Course: " + contacts[indexPath.row].course 
         return cell;
     }
     

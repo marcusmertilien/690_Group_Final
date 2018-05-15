@@ -444,9 +444,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cs-hm-cis">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Save" width="100" id="eXR-Do-Np8">
+                                        <connections>
+                                            <segue destination="p4L-Ef-j0V" kind="unwind" unwindAction="editUnwindSegueWithSender:" id="HDy-Ri-xrF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.61176470589999998" green="0.99607843139999996" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3cs-hm-cis" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0Bq-NQ-zj5"/>
                             <constraint firstItem="nqL-hd-aZy" firstAttribute="top" secondItem="CTX-kL-qOE" secondAttribute="top" id="3YX-pC-shg"/>
                             <constraint firstItem="QiL-Ze-HHF" firstAttribute="top" secondItem="rST-J8-z4l" secondAttribute="bottom" constant="12" id="6oo-Tp-6AR"/>
                             <constraint firstItem="CTX-kL-qOE" firstAttribute="leading" secondItem="nqL-hd-aZy" secondAttribute="trailing" constant="35" id="Cwi-mD-lSs"/>
@@ -458,6 +469,7 @@
                             <constraint firstItem="CTX-kL-qOE" firstAttribute="leading" secondItem="gv0-Nt-UI8" secondAttribute="leading" id="OyT-dM-H3R"/>
                             <constraint firstItem="QiL-Ze-HHF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Pgj-jZ-j2z"/>
                             <constraint firstItem="nqL-hd-aZy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="QSz-pX-UMD"/>
+                            <constraint firstAttribute="trailing" secondItem="3cs-hm-cis" secondAttribute="trailing" id="Sn8-3K-4ym"/>
                             <constraint firstItem="nqL-hd-aZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="UvW-9s-N08"/>
                             <constraint firstItem="CTX-kL-qOE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ajE-QV-Yw4"/>
                             <constraint firstItem="rST-J8-z4l" firstAttribute="bottom" secondItem="gv0-Nt-UI8" secondAttribute="bottom" id="aqH-sG-fW6"/>
@@ -467,22 +479,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XX0-nZ-QMR" secondAttribute="trailing" constant="16" id="lmc-XB-ACF"/>
                             <constraint firstItem="rST-J8-z4l" firstAttribute="top" secondItem="gv0-Nt-UI8" secondAttribute="top" id="qJT-cd-ULT"/>
                             <constraint firstItem="XX0-nZ-QMR" firstAttribute="leading" secondItem="QiL-Ze-HHF" secondAttribute="trailing" constant="35" id="qf7-Cw-REV"/>
+                            <constraint firstItem="3cs-hm-cis" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r1E-5x-gX4"/>
                             <constraint firstItem="nqL-hd-aZy" firstAttribute="leading" secondItem="rST-J8-z4l" secondAttribute="leading" id="rZq-cH-Gzu"/>
                             <constraint firstItem="CTX-kL-qOE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zaz-no-84n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Save" id="eXR-Do-Np8">
-                            <connections>
-                                <segue destination="p4L-Ef-j0V" kind="unwind" unwindAction="editUnwindSegueWithSender:" id="HDy-Ri-xrF"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="Course" destination="XX0-nZ-QMR" id="7ea-4B-AcD"/>
                         <outlet property="Location" destination="CTX-kL-qOE" id="NIE-fS-wgY"/>
-                        <outlet property="Members" destination="XX0-nZ-QMR" id="Aeo-GT-Phg"/>
                         <outlet property="Time" destination="gv0-Nt-UI8" id="cxv-sH-C3b"/>
                         <outlet property="save" destination="eXR-Do-Np8" id="1jr-Am-YgN"/>
                         <segue destination="p4L-Ef-j0V" kind="unwind" identifier="unwindSegue" unwindAction="editUnwindSegueWithSender:" id="4nf-qt-puL"/>
