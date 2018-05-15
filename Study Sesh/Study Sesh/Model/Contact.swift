@@ -14,10 +14,12 @@ class Contact{
         _id = id;
         _name = name;
         _time = time;
+      
     }
     private var _name = "";
     private var _id = "";
     private var _time = "";
+
     
     var name:String{
         return _name;

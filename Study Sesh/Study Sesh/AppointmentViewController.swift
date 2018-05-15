@@ -177,7 +177,7 @@ class AppointmentViewController: UITableViewController {
             let tim = element.time
 
             
-            DBfirebase.Instance.saveSesh(withID: randomString(length: 15), loc: loc!,time: tim!)
+            DBfirebase.Instance.saveSesh(withID: userID!, loc: loc!,time: tim!)
             
         }
 

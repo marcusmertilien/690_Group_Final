@@ -26,7 +26,7 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         for contact in contacts{
             if contact.id == FBAuth.Instance.userID(){
-                
+                FBAuth.Instance.userName = contact.name
             }
         }
         

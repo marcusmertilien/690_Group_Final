@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
 
 protocol FetchData:class {
     func dataReceived(contacts: [Contact]);
@@ -33,6 +34,26 @@ class DBfirebase{
     
     var seshsRef: FIRDatabaseReference{
         return dbRef.child("seshs")
+    }
+    
+    var chatRef: FIRDatabaseReference{
+        return seshsRef.child("chat")
+    }
+    
+    var mediaMessagesRef: FIRDatabaseReference{
+        return dbRef.child("media_messages")
+    }
+    
+    var storageRef: FIRStorageReference{
+        return FIRStorage.storage().reference(forURL:"gs://study-sesh-csc690.appspot.com")
+    }
+    
+    var imageStorageRef:FIRStorageReference{
+        return storageRef.child("image")
+    }
+    
+    var videoStorageRef:FIRStorageReference{
+        return storageRef.child("video")
     }
     
     func saveUser(withID:String,email:String,password:String){
