@@ -97,7 +97,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CAF00F1887CF690CEE8D427 /* Pods_Study_Sesh.framework in Frameworks */,
+				001A5BAF209FD57A00CB55AD /* FirebaseAuth.framework in Frameworks */,
+				81D9DFD26B757790C25E2A72 /* Pods_Study_Sesh.framework in Frameworks */,
+				001A5BB1209FD59200CB55AD /* FirebaseAnalytics.framework in Frameworks */,
+				001A5BB5209FD5BE00CB55AD /* FirebaseDatabase.framework in Frameworks */,
+				001A5BB3209FD59800CB55AD /* FirebaseCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50DCBF9B480776774EEC8162 /* Pods_Study_SeshTests.framework in Frameworks */,
+				1DAF3EFEA42049F191D116FE /* Pods_Study_SeshTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B015999860B78F5212D25A /* Pods_Study_SeshUITests.framework in Frameworks */,
+				19C9EF3243C6664F4737B319 /* Pods_Study_SeshUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,24 +137,29 @@
 		27599F11E40D6DA1BA1CF54A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				139E0A94A1BF97003D028DCC /* Pods_Study_Sesh.framework */,
-				CD20D0EA2F461344DCBDE801 /* Pods_Study_SeshTests.framework */,
-				00DE6B687554DE96E1CF1559 /* Pods_Study_SeshUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9C89DB868DC2E985B9A27F13 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				924430E542A3994D1D99CD05 /* Pods-Study Sesh.debug.xcconfig */,
-				3A5536710134E408A612F688 /* Pods-Study Sesh.release.xcconfig */,
-				191C3383913F584EC00570CF /* Pods-Study SeshTests.debug.xcconfig */,
-				6F4BCDBD5C58A09FDB350FE0 /* Pods-Study SeshTests.release.xcconfig */,
-				B35530B6756BB068557B9C9D /* Pods-Study SeshUITests.debug.xcconfig */,
-				419D8EADBFE57A119A0A461C /* Pods-Study SeshUITests.release.xcconfig */,
+				5D9BE5A28591D9E40C5E0D83 /* Pods-Study Sesh.debug.xcconfig */,
+				B781B91EC3D55710D049FF24 /* Pods-Study Sesh.release.xcconfig */,
+				A3D2BA7CD478E97E9CC2C2DC /* Pods-Study SeshTests.debug.xcconfig */,
+				06F77DCAA7702E8CCC4E9F58 /* Pods-Study SeshTests.release.xcconfig */,
+				BB01295DC81B670545AD1F7C /* Pods-Study SeshUITests.debug.xcconfig */,
+				B217E1916F51CBB1EFAFB287 /* Pods-Study SeshUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D437124F36C480A0AE00D84E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				001A5BB4209FD5BE00CB55AD /* FirebaseDatabase.framework */,
+				001A5BB2209FD59800CB55AD /* FirebaseCore.framework */,
+				001A5BB0209FD59200CB55AD /* FirebaseAnalytics.framework */,
+				001A5BAE209FD57A00CB55AD /* FirebaseAuth.framework */,
+				001A5BAC209FD56200CB55AD /* Firebase 2 */,
+				C3D36F1F9F224E1971D2BB2F /* Pods_Study_Sesh.framework */,
+				430C455829F5F19FE60BC013 /* Pods_Study_SeshTests.framework */,
+				B3F1CCF27F1DDFA84DC55375 /* Pods_Study_SeshUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F86522282086BB480006FEED /* Image Assets */ = {
@@ -167,14 +176,15 @@
 		F86D28E320858F5700737388 = {
 			isa = PBXGroup;
 			children = (
+				004998D92096A98B00713B73 /* Default-568h@2x.png */,
 				F86522262086AC430006FEED /* Launch Screen.storyboard */,
 				F86522282086BB480006FEED /* Image Assets */,
 				F86D28EE20858F5700737388 /* Study Sesh */,
 				F86D290320858F5700737388 /* Study SeshTests */,
 				F86D290E20858F5700737388 /* Study SeshUITests */,
 				F86D28ED20858F5700737388 /* Products */,
-				9C89DB868DC2E985B9A27F13 /* Pods */,
-				27599F11E40D6DA1BA1CF54A /* Frameworks */,
+				5279F2FE445830C58E3BA196 /* Pods */,
+				D437124F36C480A0AE00D84E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,11 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F86D291420858F5700737388 /* Build configuration list for PBXNativeTarget "Study Sesh" */;
 			buildPhases = (
-				F5D7C3F4A11A090CC73F8BC1 /* [CP] Check Pods Manifest.lock */,
+				23762137C9E8145374F919F7 /* [CP] Check Pods Manifest.lock */,
 				F86D28E820858F5700737388 /* Sources */,
 				F86D28E920858F5700737388 /* Frameworks */,
 				F86D28EA20858F5700737388 /* Resources */,
-				F64B166291E8E4E6642F3C89 /* [CP] Embed Pods Frameworks */,
+				E129DA75B0A340636B60AB95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,11 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F86D291720858F5700737388 /* Build configuration list for PBXNativeTarget "Study SeshTests" */;
 			buildPhases = (
-				990D1E0CE9DB043A888305F6 /* [CP] Check Pods Manifest.lock */,
+				079F00DCB3C5BAE69D6805EC /* [CP] Check Pods Manifest.lock */,
 				F86D28FC20858F5700737388 /* Sources */,
 				F86D28FD20858F5700737388 /* Frameworks */,
 				F86D28FE20858F5700737388 /* Resources */,
-				B3172596ADC080A817E48035 /* [CP] Embed Pods Frameworks */,
+				F2C9798AA46BE92009A81E05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,11 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F86D291A20858F5700737388 /* Build configuration list for PBXNativeTarget "Study SeshUITests" */;
 			buildPhases = (
-				9625F90B3EB209F429269581 /* [CP] Check Pods Manifest.lock */,
+				E14B73601D90DDAABFB244B1 /* [CP] Check Pods Manifest.lock */,
 				F86D290720858F5700737388 /* Sources */,
 				F86D290820858F5700737388 /* Frameworks */,
 				F86D290920858F5700737388 /* Resources */,
-				08889AE1BF7BADBC6281355B /* [CP] Embed Pods Frameworks */,
+				D6CF34B3B67A3D080D1CDCA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,7 +316,7 @@
 				TargetAttributes = {
 					F86D28EB20858F5700737388 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					F86D28FF20858F5700737388 = {
 						CreatedOnToolsVersion = 9.2;
@@ -352,6 +362,8 @@
 				F8A5649920A7EDD400C3FA0B /* logo.png in Resources */,
 				F86D28F520858F5700737388 /* Main.storyboard in Resources */,
 				F86522232086A7050006FEED /* Default.png in Resources */,
+				004998DA2096A98B00713B73 /* Default-568h@2x.png in Resources */,
+				00938726209BD3D7005609A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +384,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08889AE1BF7BADBC6281355B /* [CP] Embed Pods Frameworks */ = {
+		079F00DCB3C5BAE69D6805EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Study SeshTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23762137C9E8145374F919F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Study Sesh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6CF34B3B67A3D080D1CDCA0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,87 +446,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Study SeshUITests/Pods-Study SeshUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9625F90B3EB209F429269581 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Study SeshUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		990D1E0CE9DB043A888305F6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Study SeshTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B3172596ADC080A817E48035 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Study SeshTests/Pods-Study SeshTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Study SeshTests/Pods-Study SeshTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5D7C3F4A11A090CC73F8BC1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Study Sesh-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F64B166291E8E4E6642F3C89 /* [CP] Embed Pods Frameworks */ = {
+		E129DA75B0A340636B60AB95 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -502,6 +470,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Study Sesh/Pods-Study Sesh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E14B73601D90DDAABFB244B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Study SeshUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2C9798AA46BE92009A81E05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Study SeshTests/Pods-Study SeshTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Study SeshTests/Pods-Study SeshTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -678,14 +690,21 @@
 		};
 		F86D291520858F5700737388 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 924430E542A3994D1D99CD05 /* Pods-Study Sesh.debug.xcconfig */;
+			baseConfigurationReference = 5D9BE5A28591D9E40C5E0D83 /* Pods-Study Sesh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/",
+				);
 				INFOPLIST_FILE = "Study Sesh/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-Sesh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -693,14 +712,21 @@
 		};
 		F86D291620858F5700737388 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A5536710134E408A612F688 /* Pods-Study Sesh.release.xcconfig */;
+			baseConfigurationReference = B781B91EC3D55710D049FF24 /* Pods-Study Sesh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/",
+				);
 				INFOPLIST_FILE = "Study Sesh/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MM.Study-Sesh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -708,7 +734,7 @@
 		};
 		F86D291820858F5700737388 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 191C3383913F584EC00570CF /* Pods-Study SeshTests.debug.xcconfig */;
+			baseConfigurationReference = A3D2BA7CD478E97E9CC2C2DC /* Pods-Study SeshTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -725,7 +751,7 @@
 		};
 		F86D291920858F5700737388 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F4BCDBD5C58A09FDB350FE0 /* Pods-Study SeshTests.release.xcconfig */;
+			baseConfigurationReference = 06F77DCAA7702E8CCC4E9F58 /* Pods-Study SeshTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -742,7 +768,7 @@
 		};
 		F86D291B20858F5700737388 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B35530B6756BB068557B9C9D /* Pods-Study SeshUITests.debug.xcconfig */;
+			baseConfigurationReference = BB01295DC81B670545AD1F7C /* Pods-Study SeshUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -758,7 +784,7 @@
 		};
 		F86D291C20858F5700737388 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 419D8EADBFE57A119A0A461C /* Pods-Study SeshUITests.release.xcconfig */;
+			baseConfigurationReference = B217E1916F51CBB1EFAFB287 /* Pods-Study SeshUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

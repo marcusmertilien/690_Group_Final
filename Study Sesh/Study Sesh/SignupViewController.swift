@@ -1,16 +1,15 @@
 //
-//  LoginViewController.swift
-//  FireSwiftAuthentication
+//  SignupControllerView.swift
+//  Study Sesh
 //
-//
+//  Created by Shyran on 5/6/18.
+//  Copyright © 2018 Mertilien Studios. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
-import FirebaseDatabase
-import FirebaseStorage
-import FirebaseAnalytics
 
 class SignupViewController: UIViewController {
     
@@ -82,6 +81,3 @@ class SignupViewController: UIViewController {
         }
     }
 }
-
-
-
